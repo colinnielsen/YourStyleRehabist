@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Starter Landing Page`,
-    description: `A barebone landing page starter with some minimal styles.`,
-    author: `@gillkyle`,
+    title: `Your Style Rehabist`,
+    description: `Rehab your closet with stylist Monika Nielsen`,
+    author: `Colin Nielsen`,
     siteUrl: `https://gatsby-starter-landing-page.netlify.com`,
   },
   plugins: [

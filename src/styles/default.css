@@ -2,6 +2,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -444,4 +445,34 @@ li > p {
   html {
     font-size: 100%;
   }
+}
+
+svg {
+  position: absolute;
+  margin-top: 130px;
+}
+
+@font-face {
+  font-family: "Inria_bold";
+  src: url("../fonts/InriaSerif-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Inria_lightItalic";
+  src: url("../fonts/InriaSerif-LightItalic.ttf");
+}
+
+@font-face {
+  font-family: "Inria_italic";
+  src: url("../fonts/InriaSerif-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Inria_bold";
+  src: url("../fonts/InriaSerif-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Inria";
+  src: url("../fonts/InriaSerif-Regular.ttf");
 }

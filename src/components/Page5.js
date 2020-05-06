@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Page5SpashImage from './Page5SplashImage';
+import MessengerIcon from './MessengerIcon';
 
 const Page5Container = styled.section`
    height: 100vh;
@@ -10,10 +11,13 @@ const Page5Container = styled.section`
    background: #F9F8F7;
    flex-flow: row wrap;
    overflow: hidden;
-   padding: 10%;
 `;
 
-const ImageContainer = styled.div``;
+const ImageContainer = styled.div`
+   position: absolute;
+   top: 575vh;
+   left: 10vw;
+`;
 
 const Gradient = styled.div`
    width: 1000px;
@@ -68,48 +72,64 @@ const FinalQuote = styled.div`
 `;
 
 const ContactContainer = styled.div`
+   position: absolute;
+   top: 630vh;
+   left: 60vw;
+   z-index: 2;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    background: #462631;
    width: 400px;
-   height: 300px;
+   height: 220px;
 `;
 
 const MessageButton = styled.div`
-   display: inline-block;
+   width: 270px;
+   height: 80px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
    font-size: 20px;
    font-weight: bold;
    color: #fff;
    text-align: center;
    padding: 12px 16px;
    margin: 0;
-   background-color: #0084ff;
    border: 0;
+   font-size: 25px;
+   background-color: #FFFFFF;
    border-radius: 5px; 
    cursor: pointer;
    outline: none;
-`
-   // a:hover.fb-msg-btn { 
-   // background-color: #0268c7; 
-   // }
+`;
 
-const Page5 = () => 
+const Link = styled.a`
+   margin-left: 15px;
+`;
+
+const Page5 = () =>
    <Page5Container>
       <ImageContainer>
-            <Text>
-               <SplashText>Imagine...</SplashText>
-               <DescriptorText>
-                  getting ready quickly, feeling like you have lots of choices, feeling fiercely confident what's clothing that you know fits and you look good in. Now imagine being able to give to others and make a huge difference.<br /><br /> It is the ultimate and Do Good-Look Good!
+         <Text>
+            <SplashText>Imagine...</SplashText>
+            <DescriptorText>
+               getting ready quickly, feeling like you have lots of choices, feeling fiercely confident what's clothing that you know fits and you look good in. Now imagine being able to give to others and make a huge difference.<br /><br /> It is the ultimate and Do Good-Look Good!
                </DescriptorText>
-               <Line />
-               <FinalQuote>
-                  I work in 2 hour increments, based on your needs.
+            <Line />
+            <FinalQuote>
+               I work in 2 hour increments, based on your needs.
                </FinalQuote>
-            </Text>
+         </Text>
          <Gradient />
          <Page5SpashImage />
       </ImageContainer>
       <ContactContainer>
          <MessageButton>
-            Messenge me
+            <MessengerIcon />
+            <Link href='http://m.me/monika.nielsen.14'>
+               Message me
+            </Link>
          </MessageButton>
       </ContactContainer>
    </Page5Container>;

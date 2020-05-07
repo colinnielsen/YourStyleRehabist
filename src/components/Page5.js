@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Page5SpashImage from './Page5SplashImage';
 import MessengerIcon from './MessengerIcon';
+import EmailIcon from './EmailIcon';
 
 const Page5Container = styled.section`
    height: 100vh;
@@ -77,6 +78,7 @@ const ContactContainer = styled.div`
    left: 60vw;
    z-index: 2;
    display: flex;
+   flex-flow: column nowrap;
    align-items: center;
    justify-content: center;
    background: #462631;
@@ -84,28 +86,36 @@ const ContactContainer = styled.div`
    height: 220px;
 `;
 
-const MessageButton = styled.div`
+const Button = styled.div`
    width: 270px;
-   height: 80px;
+   height: 70px;
    display: flex;
+   margin: 10px;
    align-items: center;
    justify-content: space-around;
-   font-size: 20px;
+   font-size: 10px;
    font-weight: bold;
    color: #fff;
    text-align: center;
    padding: 12px 16px;
-   margin: 0;
-   border: 0;
-   font-size: 25px;
+   font-size: 22px;
    background-color: #FFFFFF;
    border-radius: 5px; 
    cursor: pointer;
    outline: none;
 `;
 
+const MessageButton = styled(Button)`
+   color: #377df6;
+`;
+
 const Link = styled.a`
    margin-left: 15px;
+`;
+
+const EmailButton = styled(Button)`
+   background-color: #cccccc;
+   color: black;
 `;
 
 const Page5 = () =>
@@ -125,12 +135,22 @@ const Page5 = () =>
          <Page5SpashImage />
       </ImageContainer>
       <ContactContainer>
-         <MessageButton>
+         <MessageButton
+            onClick={() => window.location.href = 'http://m.me/monika.nielsen.14'} 
+         >
             <MessengerIcon />
-            <Link href='http://m.me/monika.nielsen.14'>
-               Message me
+            <Link>
+               Message Me
             </Link>
          </MessageButton>
+         <EmailButton 
+            onClick={() => window.location.href = 'mailto:monikamnielsen@gmail.com'}
+         >
+            <EmailIcon />
+            <Link>
+               Email Me
+            </Link>
+         </EmailButton>
       </ContactContainer>
    </Page5Container>;
 

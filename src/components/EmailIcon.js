@@ -7,9 +7,9 @@ export default () =>
       query={
          graphql`
          query {
-            file(relativePath: { eq: "icon.png" }) {
+            file(relativePath: { eq: "emailme.png" }) {
                childImageSharp {
-                  fixed(width: 30, height: 30) {
+                  fixed(width: 40, height: 40) {
                      ...GatsbyImageSharpFixed
                   }
                }

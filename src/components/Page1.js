@@ -8,10 +8,21 @@ const Page1Container = styled.div`
    display: flex;
    align-items: center;
    justify-content: center;
-   flex-flow: row nowrap;
+   flex-flow: row wrap;
+`;
+
+const _ProfilePic = styled(ProfilePic)`
+   @media only screen and (max-width: 800px) {
+      width: 250px;
+      height: 250px;
+   }
 `;
 
 const ProfileContainer = styled.div`
+   @media only screen and (max-width: 800px) {
+      width: 250px;
+      height: 250px;
+   }
    width: 400px;
    height: 400px;
    background: linear-gradient(108.75deg, #694551 14.18%, #E3C5BD 200.53%);
@@ -27,6 +38,9 @@ const LandingInfo = styled.div`
 `;
 
 const Name = styled.div`
+   @media only screen and (max-width: 800px) {
+      display: none;
+   }
    font-family: 'Inria_bold';
    font-size: 80px;
    height: 80px;
@@ -34,6 +48,14 @@ const Name = styled.div`
 `;
 
 const SplashBox = styled.div`
+   @media only screen and (max-width: 800px) {
+      width: 300px;
+      font-size: 40px;
+      text-align: center;
+      padding: 0;
+      padding: 20px;
+      margin: 0;
+   }
    margin-left: 100px;
    width: 600px;
    float: right;
@@ -63,7 +85,7 @@ const Page1 = ({ children }) => (
       <StyledBackgroundSection>
          <Page1Container>
             <ProfileContainer>
-               <ProfilePic />
+               <_ProfilePic />
             </ProfileContainer>
             <LandingInfo>
                <Name>Monika Nielsen</Name>

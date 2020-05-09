@@ -11,16 +11,17 @@ export default () =>
    <StaticQuery
       query={
          graphql`
-         query {
-            file(relativePath: { eq: "mom.jpg" }) {
-               childImageSharp {
-                  fixed(width: 400, height: 400) {
-                     ...GatsbyImageSharpFixed
+            query {
+               file(relativePath: { eq: "mom.jpg" }) {
+                  imageSharp {
+                     fluid(maxWidth: 400, quality: 90) {
+                        ...GatsbyImageSharpFluid
+                     }
                   }
                }
             }
-         }
-      `}
+         `
+      }
       render={data => 
          <ImageTransform>
             <Img fixed={data.file.childImageSharp.fixed} />

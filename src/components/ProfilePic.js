@@ -13,8 +13,8 @@ export default () =>
          graphql`
             query {
                file(relativePath: { eq: "mom.jpg" }) {
-                  imageSharp {
-                     fluid(maxWidth: 400, quality: 90) {
+                  childImageSharp {
+                     fluid(maxWidth: 400) {
                         ...GatsbyImageSharpFluid
                      }
                   }
@@ -22,9 +22,10 @@ export default () =>
             }
          `
       }
-      render={data => 
+      
+      render={data =>
          <ImageTransform>
-            <Img fixed={data.file.childImageSharp.fixed} />
+            <Img fluid={data.file.childImageSharp.fluid} />
          </ImageTransform>
       }
    />;

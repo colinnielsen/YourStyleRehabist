@@ -4,11 +4,16 @@ import StyledBackgroundSection from './BackgroundImage';
 import ProfilePic from './ProfilePic';
 
 const Page1Container = styled.div`
+   @media only screen and (max-width: 800px) {
+      flex-direction: column;
+   }
    height: 100%;
+   width: 100vw;
    display: flex;
    align-items: center;
    justify-content: center;
-   flex-flow: row wrap;
+   flex-wrap: nowrap;
+   flex-direction: row;
 `;
 
 const _ProfilePic = styled(ProfilePic)`
@@ -22,6 +27,7 @@ const ProfileContainer = styled.div`
    @media only screen and (max-width: 800px) {
       width: 250px;
       height: 250px;
+      transform: translate(0,20px)
    }
    width: 400px;
    height: 400px;
@@ -29,6 +35,11 @@ const ProfileContainer = styled.div`
 `;
 
 const LandingInfo = styled.div`
+   @media only screen and (max-width: 800px) {
+      margin-left: 0px;
+      height: auto;
+      width: auto;
+   }
    display: block;
    justify-content: center;
    align-items: space-around;
@@ -55,6 +66,9 @@ const SplashBox = styled.div`
       padding: 0;
       padding: 20px;
       margin: 0;
+      float: none;
+      line-height: 62px;
+      transform: translate(0,30px)
    }
    margin-left: 100px;
    width: 600px;
@@ -80,7 +94,7 @@ const Line = styled.div`
    border: 3px solid #82786E;
 `;
 
-const Page1 = ({ children }) => (
+const Page1 = () => 
    <>
       <StyledBackgroundSection>
          <Page1Container>
@@ -97,7 +111,6 @@ const Page1 = ({ children }) => (
             </LandingInfo>
          </Page1Container>
       </StyledBackgroundSection>
-   </>
-)
+   </>;
 
 export default Page1;

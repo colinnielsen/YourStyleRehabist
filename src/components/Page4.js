@@ -3,8 +3,13 @@ import styled from 'styled-components';
 import Page4SpashImage from './Page4SplashImage';
 
 const Page4Container = styled.section`
-   height: 100vh;
-   width: 100%;
+   @media only screen and (max-width: 800px) {
+      flex-flow: column nowrap;
+      padding: 0;
+   }
+   width: 100vw;
+   min-width: 100vw;
+   max-width: 100vw;
    display: flex;
    justify-content: space-between;
    background: #F9F8F7;
@@ -14,6 +19,12 @@ const Page4Container = styled.section`
 `;
 
 const ReviewContainer = styled.div`
+   @media only screen and (max-width: 800px) {
+      width: 90%;
+      margin: 30px;
+      padding: 0;
+      margin-top: 0px;
+   }
    width: 600px;
    font-family: Inria;
    font-size: 22px;
@@ -21,7 +32,17 @@ const ReviewContainer = styled.div`
    margin-top: 80px;
 `;
 
+const FirstReviewContainer = styled(ReviewContainer)`
+   @media only screen and (max-width: 800px) {
+      margin-top: 20vh;
+   }
+`;
+
 const Gradient = styled.div`
+   @media only screen and (max-width: 800px) {
+      width: 0;
+      display: none;
+   }
    position: absolute;
    width: 500px;
    height: 400px;
@@ -32,6 +53,18 @@ const Gradient = styled.div`
 `;
 
 const SplashText = styled.div`
+   @media only screen and (max-width: 800px) {
+      transform: none;
+      margin-top: 20vh;
+      font-size: 28px;
+      width: 80vw;
+      margin-left: 50%;
+      transform: translate(-50%,0);
+      padding: 20px;
+      line-height: 35px;
+      left: 0;
+      right: inherit;
+   }
    position: absolute;
    font-family: Inria_bold;
    font-size: 50px;
@@ -47,6 +80,11 @@ const SplashText = styled.div`
 `;
 
 const ImageAndText = styled.div`
+   @media only screen and (max-width: 800px) {
+      margin-top: 20vh;
+      right: 0;
+      left: 0;
+   }
    position: absolute;
    right: 15vw;
    top: 475vh;
@@ -62,11 +100,11 @@ const QuoteEnd = styled.div`
 const Page4 = () =>
    <>
       <Page4Container>
-         <ReviewContainer>
+         <FirstReviewContainer>
             “I had the pleasure of working with Monika as a personal stylist. We met at the mall to shop for a dress to wear to a wedding I was attending last Fall. She was incredible!
             <br />She picked out the cutest dresses for me to try on some that I wouldd have NEVER picked myself, but I did it anyway. We found the perfect dress for the occasion! It was one of the best shopping experiences ever. We had so muchh fun - laughing, chatting, and she taught me about how to fit to my body! Monika is the best! ♥️”
             <QuoteEnd>by Carrie - Castle Rock</QuoteEnd>
-         </ReviewContainer>
+         </FirstReviewContainer>
          <ImageAndText>
             <SplashText>
                What people<br />are saying...

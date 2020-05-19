@@ -6,9 +6,10 @@ const Page2Container = styled.section`
    @media only screen and (max-width: 800px) {
       transform: none;
       flex-flow: column wrap;
+      height: 95vh
    }
    height: 110vh;
-   width: 100%;
+   width: 100vw;
    transform: translate(-2px);
    display: flex;
    background: rgba(181, 168, 152, 0.08);
@@ -42,6 +43,9 @@ const ImageContainer = styled.div`
 `;
 
 const Gradient = styled.div`
+   @media only screen and (max-width: 800px) {
+      width: 100%;
+   }
    z-index: 1;
    position: absolute;
    width: 1000px;

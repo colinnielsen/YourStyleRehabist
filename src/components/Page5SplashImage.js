@@ -2,21 +2,26 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
-export default () => 
+export default () =>
    <StaticQuery
       query={
          graphql`
-         query {
-            file(relativePath: { eq: "splash3.jpg" }) {
-               childImageSharp {
-                  fixed(width: 1000, height: 700) {
-                     ...GatsbyImageSharpFixed
+            query {
+               file(relativePath: { eq: "splash3.jpg" }) {
+                  childImageSharp {
+                     fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                     }
                   }
                }
             }
-         }
-      `}
+         `
+      }
       render={data =>
-         <Img fixed={data.file.childImageSharp.fixed} />
+         <div style={{ width: '200%', height: '100vh'}} >
+            <Img
+               fluid={data.file.childImageSharp.fluid}
+            />
+         </div>
       }
    />;

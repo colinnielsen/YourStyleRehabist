@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import StyledBackgroundSection from './BackgroundImage';
-import ProfilePic from './ProfilePic';
+import _ProfilePic from './ProfilePic';
 
 const Page1Container = styled.div`
    @media only screen and (max-width: 800px) {
       flex-direction: column;
    }
-   height: 100%;
+   height: 100vh;
    width: 100vw;
    display: flex;
    align-items: center;
@@ -16,7 +16,7 @@ const Page1Container = styled.div`
    flex-direction: row;
 `;
 
-const _ProfilePic = styled(ProfilePic)`
+const ProfilePic = styled(_ProfilePic)`
    @media only screen and (max-width: 800px) {
       width: 250px;
       height: 250px;
@@ -99,7 +99,7 @@ const Page1 = () =>
       <StyledBackgroundSection>
          <Page1Container>
             <ProfileContainer>
-               <_ProfilePic />
+               <ProfilePic />
             </ProfileContainer>
             <LandingInfo>
                <Name>Monika Nielsen</Name>

@@ -5,24 +5,38 @@ import MessengerIcon from './MessengerIcon';
 import EmailIcon from './EmailIcon';
 
 const Page5Container = styled.section`
-   height: 100vh;
-   width: 100%;
+   @media only screen and (max-width: 800px) {
+      flex-flow: column wrap;
+      padding: 0;
+   }
+   height: 80vh;
+   width: 100vw;
+   max-width: 100vw;
    display: flex;
    justify-content: space-between;
    background: #F9F8F7;
    flex-flow: row wrap;
-   overflow: hidden;
+   overflow-x: hidden;
 `;
 
 const ImageContainer = styled.div`
+   @media only screen and (max-width: 800px) {
+      width: 100vw;
+      height: 80vh;
+      left: 0;
+   }
+   width: 55vw;
    position: absolute;
-   top: 575vh;
+   margin-top: 0vh;
    left: 10vw;
 `;
 
 const Gradient = styled.div`
-   width: 1000px;
-   height: 700px;
+   @media only screen and (max-width: 800px) {
+      width: 100vw;
+   }
+   width: 100%;
+   height: 100%;
    position: absolute;
    z-index: 1;
    background: linear-gradient(89.11deg, #B5A898 -0.52%,
@@ -31,6 +45,9 @@ const Gradient = styled.div`
 `;
 
 const SplashText = styled.div`
+   @media only screen and (max-width: 800px) {
+      font-size: 50px;
+   }
    color: #FFF;
    margin-left: 20px;
    margin-top: 80px;
@@ -39,6 +56,12 @@ const SplashText = styled.div`
 `;
 
 const DescriptorText = styled.div`
+   @media only screen and (max-width: 800px) {
+      font-size: 22px;
+      line-height: 30px;
+      padding: 10px;
+      margin-top: 15px;
+   }
    font-family: Inria;
    font-size: 31px;
    line-height: 40px;
@@ -48,6 +71,9 @@ const DescriptorText = styled.div`
 `;
 
 const Text = styled.div`
+   @media only screen and (max-width: 800px) {
+      width: 90vw;
+   }
    padding: 30px;
    width: 1000px;
    height: 700px;
@@ -56,6 +82,10 @@ const Text = styled.div`
 `;
 
 const Line = styled.div`
+   @media only screen and (max-width: 800px) {
+      width: 90vw;
+      margin: 0
+   }
    height: 3px;
    width: 600px;
    margin-top: 20px;
@@ -64,6 +94,10 @@ const Line = styled.div`
 `;
 
 const FinalQuote = styled.div`
+   @media only screen and (max-width: 800px) {
+      font-size: 22px;
+      margin-top: 30px;
+   }
    font-family: Inria;
    color: #FFF;
    font-size: 36px;
@@ -73,8 +107,17 @@ const FinalQuote = styled.div`
 `;
 
 const ContactContainer = styled.div`
+   @media only screen and (max-width: 800px) {
+      flex-flow: column wrap;
+      padding: 20px;
+      margin-top: 85vh;
+      width: 60vw;
+      left: 50%;
+      transform: translate(-50%,0);
+      height: auto;
+   }
    position: absolute;
-   top: 630vh;
+   margin-top: 52vh;
    left: 60vw;
    z-index: 2;
    display: flex;
@@ -87,13 +130,17 @@ const ContactContainer = styled.div`
 `;
 
 const Button = styled.div`
+   @media only screen and (max-width: 800px) {
+      width: auto;
+      font-size: 16px;
+      height: auto;
+   }
    width: 270px;
    height: 70px;
    display: flex;
    margin: 10px;
    align-items: center;
    justify-content: space-around;
-   font-size: 10px;
    font-weight: bold;
    color: #fff;
    text-align: center;
@@ -125,11 +172,11 @@ const Page5 = () =>
             <SplashText>Imagine...</SplashText>
             <DescriptorText>
                getting ready quickly, feeling like you have lots of choices, feeling fiercely confident what's clothing that you know fits and you look good in. Now imagine being able to give to others and make a huge difference.<br /><br /> It is the ultimate and Do Good-Look Good!
-               </DescriptorText>
+            </DescriptorText>
             <Line />
             <FinalQuote>
                I work in 2 hour increments, based on your needs.
-               </FinalQuote>
+            </FinalQuote>
          </Text>
          <Gradient />
          <Page5SpashImage />

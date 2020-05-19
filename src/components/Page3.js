@@ -4,8 +4,11 @@ import Page3SpashImage from './Page3SplashImage';
 import DivClip from './divClip.js';
 
 const Page3Container = styled.section`
+   @media only screen and (max-width: 800px) {
+      height: 330vh;
+   }
    height: 250vh;
-   width: 100%;
+   width: 100vw;
    display: flex;
    background: linear-gradient(125.65deg, #462631 1.27%, #DBD1C7 112.48%);
    flex-flow: row nowrap;
@@ -13,6 +16,14 @@ const Page3Container = styled.section`
 `;
 
 const SplashText = styled.div`
+   @media only screen and (max-width: 800px) {
+      margin: 0;
+      margin-left: 50%;
+      transform: translate(-50%,-50%);
+      width: 350px;
+      padding: 20px;
+      font-size: 40px;
+   }
    position: absolute;
    margin-top: 30px;
    margin-left: 80px;
@@ -41,6 +52,10 @@ const ProgressMarker = styled.div`
 `;
 
 const ProgressionBarContainer = styled.div`
+   @media only screen and (max-width: 800px) {
+      display: none;
+      visibility: hidden;
+   }
    display: flex;
    flex-flow: column nowrap;
    justify-content: center;
@@ -51,12 +66,20 @@ const ProgressionBarContainer = styled.div`
 `;
 
 const FirstStep = styled.div`
+   @media only screen and (max-width: 800px) {
+      margin: 0;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      margin-top: 50vh;
+      width: 90%;
+      font-size: 20px;
+   }
    position: absolute;  
    margin: 40px;
    padding: 20px;
    width: 425px;
    left: 15vw;
-   top: 235vh;
+   margin-top: 30vh;
    z-index: 2;
    background: #DBD1C7;
    font-family: Inria_bold;
@@ -70,6 +93,11 @@ const FirstStep = styled.div`
 `;
 
 const Label = styled.div`
+   @media only screen and (max-width: 800px) {
+      transform: translate(-30px,-60px);
+      width: 320px;
+      font-size: 34px;
+   }
    background: #C5B9AD;
    width: 350px;
    text-align: center;
@@ -87,6 +115,14 @@ const FirstStepLabel = styled(Label)`
 `;
 
 const SecondStep = styled.div`
+   @media only screen and (max-width: 800px) {
+      margin: 0;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      margin-top: 40vh;
+      width: 90%;
+      font-size: 20px;
+   }
    position: absolute;  
    margin: 40px;
    padding: 20px;
@@ -106,12 +142,23 @@ const SecondStep = styled.div`
 `;
 
 const SecondStepLabel = styled(Label)`
+   @media only screen and (max-width: 800px) {
+      transform: translate(10px, -60px) !important;
+   }
    height: 100px;
    line-height: 40px;
    margin-bottom: -40px;
 `;
 
 const ThirdStep = styled.div`
+   @media only screen and (max-width: 800px) {
+      margin: 0;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      margin-top: 57vh;
+      width: 90%;
+      font-size: 20px;
+   }
    position: absolute;  
    margin: 40px;
    padding: 20px;
@@ -156,25 +203,44 @@ const Gradient = styled.div`
 `;
 
 const ImageContainer = styled.div`
+   @media only screen and (max-width: 800px) {
+      display: none;
+   }
    position: absolute;
-   top: 285vh;
+   margin-top: 85vh;
    left: 13%;
 `;
 
-const SecondSpashText = styled(SplashText)`
+const SecondSplashText = styled(SplashText)`
+   @media only screen and (max-width: 800px) {
+      margin-top: 205vh;
+      font-size: 34px;
+      width: 101%;
+      left: 0;
+   }
    background: #462631;
-   top: 380vh;
+   margin-top: 160vh;
    left: 2vw;
 `;
 
 const SecondDisplay = styled.div`
+   @media only screen and (max-width: 800px) {
+      width: 95%;
+      left: 50%;
+      transform: translate(-50%);
+      font-size: 18px;
+      margin-top: 220vh;
+      padding: 10px;
+      right: 0;
+      line-height: 25px;
+   }
    padding: 50px;
    color: white;
    line-height: 35px;
    position: absolute;
    font-family: Inria;
    font-size: 30px;
-   top: 379vh;
+   margin-top: 180vh;
    height: 626px;
    width: 950px;
    background: #C5B9AD;
@@ -182,6 +248,12 @@ const SecondDisplay = styled.div`
 `;
 
 const SecondDisplayH1 = styled(H1)`
+   @media only screen and (max-width: 800px) {
+      font-size: 28px;
+      line-height: 30px;
+      margin: 0;
+      margin-bottom: 20px;
+   }
    margin-top: 0;
    font-size: 45px;
    margin-left: -20px;
@@ -190,17 +262,14 @@ const SecondDisplayH1 = styled(H1)`
 `;
 
 const Line = styled.div`
+   @media only screen and (max-width: 800px) {
+      width: 90%;
+   }
    height: 2px;
    width: 600px;
    float: right;
    margin-top: 50px;
    border: 3px solid #82786E;
-`;
-
-const StyledDivClip = styled(DivClip)`
-   position: absolute;
-   display: block;
-   z-index: 10;
 `;
 
 const ProgressionBar = () =>
@@ -216,7 +285,7 @@ const ProgressionBar = () =>
 
 const Page2 = () =>
    <>
-      <StyledDivClip />
+      <DivClip />
       <Page3Container>
          <SplashText>
             How can I help?
@@ -245,9 +314,9 @@ const Page2 = () =>
             <Gradient />
             <Page3SpashImage />
          </ImageContainer>
-         <SecondSpashText>
+         <SecondSplashText>
             ...most importantly
-         </SecondSpashText>
+         </SecondSplashText>
          <SecondDisplay>
             <SecondDisplayH1>
                I am a first generation purger

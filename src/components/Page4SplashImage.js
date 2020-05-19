@@ -17,6 +17,6 @@ export default () =>
          }
       `}
       render={data =>
-         <Img fixed={data.file.childImageSharp.fixed} />
+         <Img fixed={data.file.childImageSharp.fixed} className='hideIfMobile' />
       }
    />;

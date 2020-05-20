@@ -9,8 +9,8 @@ const Page5Container = styled.section`
       flex-flow: column wrap;
       padding: 0;
    }
-   height: 80vh;
    width: 100vw;
+   height: 87vh;
    max-width: 100vw;
    display: flex;
    justify-content: space-between;
@@ -22,19 +22,19 @@ const Page5Container = styled.section`
 const ImageContainer = styled.div`
    @media only screen and (max-width: 800px) {
       width: 100vw;
-      height: 80vh;
+      height: 96vh;
       left: 0;
+      display: flex;
+      justify-content: center;
    }
    width: 55vw;
    position: absolute;
    margin-top: 0vh;
+   height: ;
    left: 10vw;
 `;
 
 const Gradient = styled.div`
-   @media only screen and (max-width: 800px) {
-      width: 100vw;
-   }
    width: 100%;
    height: 100%;
    position: absolute;
@@ -47,6 +47,9 @@ const Gradient = styled.div`
 const SplashText = styled.div`
    @media only screen and (max-width: 800px) {
       font-size: 50px;
+      margin: 0;
+      margin-top: 20px;
+      margin-left: -10px;
    }
    color: #FFF;
    margin-left: 20px;
@@ -83,8 +86,10 @@ const Text = styled.div`
 
 const Line = styled.div`
    @media only screen and (max-width: 800px) {
-      width: 90vw;
-      margin: 0
+      width: 86vw;
+      margin: 0;
+      margin-left: 50%;
+      transform: translate(-50%,-50%);
    }
    height: 3px;
    width: 600px;
@@ -95,10 +100,11 @@ const Line = styled.div`
 
 const FinalQuote = styled.div`
    @media only screen and (max-width: 800px) {
-      font-size: 22px;
-      margin-top: 30px;
+      font-size: 24px;
+      margin-top: 26px;
+      padding: 0;
    }
-   font-family: Inria;
+   font-family: Inria_italic;
    color: #FFF;
    font-size: 36px;
    padding: 30px;
@@ -108,12 +114,11 @@ const FinalQuote = styled.div`
 
 const ContactContainer = styled.div`
    @media only screen and (max-width: 800px) {
-      flex-flow: column wrap;
+      flex-flow: row nowrap;
       padding: 20px;
-      margin-top: 85vh;
-      width: 60vw;
-      left: 50%;
-      transform: translate(-50%,0);
+      margin-top: 95vh;
+      width: 100vw;
+      left: 0;
       height: auto;
    }
    position: absolute;
@@ -133,7 +138,7 @@ const Button = styled.div`
    @media only screen and (max-width: 800px) {
       width: auto;
       font-size: 16px;
-      height: auto;
+      height: 55px;
    }
    width: 270px;
    height: 70px;
@@ -171,11 +176,12 @@ const Page5 = () =>
          <Text>
             <SplashText>Imagine...</SplashText>
             <DescriptorText>
-               getting ready quickly, feeling like you have lots of choices, feeling fiercely confident what's clothing that you know fits and you look good in. Now imagine being able to give to others and make a huge difference.<br /><br /> It is the ultimate and Do Good-Look Good!
+               getting ready quickly, feeling like you have lots of choices, feeling fiercely confident what's clothing that you know fits and you look good in.
+               <br />Now imagine being able to give to others and make a huge difference.<br /><br /> It is the ultimate and Do Good-Look Good!
             </DescriptorText>
             <Line />
             <FinalQuote>
-               I work in 2 hour increments, based on your needs.
+               I work in 2 hour increments, based on <br />your needs.
             </FinalQuote>
          </Text>
          <Gradient />
@@ -183,19 +189,19 @@ const Page5 = () =>
       </ImageContainer>
       <ContactContainer>
          <MessageButton
-            onClick={() => window.location.href = 'http://m.me/monika.nielsen.14'} 
+            onClick={() => window.location.href = 'http://m.me/monika.nielsen.14'}
          >
             <MessengerIcon />
             <Link>
-               Message Me
+               Messenger
             </Link>
          </MessageButton>
-         <EmailButton 
+         <EmailButton
             onClick={() => window.location.href = 'mailto:monikamnielsen@gmail.com'}
          >
             <EmailIcon />
             <Link>
-               Email Me
+               Email
             </Link>
          </EmailButton>
       </ContactContainer>

@@ -25,6 +25,7 @@ const ContentContainer = styled.div`
    @media only screen and (max-width: 800px) {
       transform: none;
       flex-flow: column wrap;
+      height: 105vh;
    }
    align-items: center;
    justify-content: center;
@@ -58,16 +59,18 @@ const Gradient = styled.div`
 
 const SplashBox = styled.div`
    @media only screen and (max-width: 800px) {
-      width: 250px;
+      width: 325px;
       height: 80px;
       font-style: normal;
-      font-size: 40px;
+      font-size: 36px;
+      line-height: 30px;
       margin: 20px;
-      top: 120vh;
+      left: -10px;
+      margin-top: 3vh;
    }
    position: absolute;  
    margin: 40px;
-   z-index: 2;
+   z-index: 4;
    height: 250px;
    width: 400px;
    background: #DBD1C7;
@@ -89,7 +92,8 @@ const SplashColorBox = styled.div`
       width: 85%;
       position: absolute;
       padding: 15px;
-      height: 450px;
+      height: 405px;
+      margin-top: -10px;
    }
    background: #C5B9AD;
    z-index: 2;

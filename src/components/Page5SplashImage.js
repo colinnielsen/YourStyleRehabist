@@ -18,10 +18,8 @@ export default () =>
          `
       }
       render={data =>
-         <div style={{ width: '200%', height: '100vh'}} >
             <Img
                fluid={data.file.childImageSharp.fluid}
             />
-         </div>
       }
    />;

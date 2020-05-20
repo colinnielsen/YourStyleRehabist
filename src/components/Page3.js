@@ -215,7 +215,7 @@ const SecondSplashText = styled(SplashText)`
    @media only screen and (max-width: 800px) {
       margin-top: 205vh;
       font-size: 34px;
-      width: 101%;
+      width: 100vw;
       left: 0;
    }
    background: #462631;
@@ -239,7 +239,7 @@ const SecondDisplay = styled.div`
    line-height: 35px;
    position: absolute;
    font-family: Inria;
-   font-size: 30px;
+   font-size: 24px;
    margin-top: 180vh;
    height: 626px;
    width: 950px;

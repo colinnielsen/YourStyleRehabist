@@ -164,7 +164,7 @@ const ThirdStep = styled.div`
    padding: 20px;
    width: 425px;
    right: 10%;
-   top: 310%;
+   margin-top: 110vh;
    z-index: 2;
    background: #DBD1C7;
    font-family: Inria_bold;

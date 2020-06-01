@@ -31,7 +31,7 @@ const ProfileContainer = styled.div`
    }
    width: 400px;
    height: 400px;
-   background: linear-gradient(108.75deg, #694551 14.18%, #E3C5BD 200.53%);
+   background: linear-gradient(108.75deg, #9A9086 14.18%, #AAA39C 206.1%, #FFFFFF 206.12%);
 `;
 
 const LandingInfo = styled.div`
@@ -44,7 +44,7 @@ const LandingInfo = styled.div`
    justify-content: center;
    align-items: space-around;
    margin-left: 75px;
-   width: 700px;
+   width: 40%;
    height: 400px;
 `;
 
@@ -54,6 +54,7 @@ const Name = styled.div`
    }
    font-family: 'Inria_bold';
    font-size: 80px;
+   display: inline-block;
    height: 80px;
    color: #5E2828;
 `;
@@ -81,20 +82,30 @@ const SplashBox = styled.div`
    justify-content: center;
    font-size: 55px;
    font-weight: 300;
+   text-align: right;
    line-height: 72px;
    font-family: 'Inria_lightItalic';
    background: linear-gradient(90deg, #F2F2F1 0%, rgba(242, 242, 241, 0.86) 140.78%);
    color: #873954;
 `;
 
-const Line = styled.div`
-   height: 3px;
-   width: 200px;
-   float: right;
-   border: 3px solid #82786E;
+const P = styled.div`
+   margin-top: 30px;
+   margin-bottom: 30px;
+   font-size: 30px;
+   line-height: 40px;
+   text-align: center;
 `;
 
-const Page1 = () => 
+const Line = styled.div`
+   height: 3px;
+   width: 400px;
+   border: 3px solid #82786E;
+   margin-left: 50%;
+   transform: translate(-50%);
+`;
+
+const Page1 = () =>
    <>
       <StyledBackgroundSection>
          <Page1Container>
@@ -102,10 +113,16 @@ const Page1 = () =>
                <ProfilePic />
             </ProfileContainer>
             <LandingInfo>
-               <Name>Monika Nielsen</Name>
+               <Name>Your Style Rehabist</Name>
                <SplashBox>
-                  Hi, I am your<br/>
-                  new style rehabist.
+                  I'm Monika Nielsen
+                  <br /> Your Style Rehabist.
+                  <P>I specialize in the 3 C's.
+                     <br />
+                     Cleansing and Clarifying your closet to create a Capsulated wardrobe.
+                     <br />
+                     I will take the chaos of your closet into calm in your life - so you're no longer standing and staring at the things you never wear.
+                  </P>
                   <Line />
                </SplashBox>
             </LandingInfo>

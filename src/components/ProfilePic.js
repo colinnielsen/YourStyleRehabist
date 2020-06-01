@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
 const ImageTransform = styled.div`
-   transform: translate(-30px, -30px)
+   transform: translate(30px, 30px)
 `;
 
 export default () =>

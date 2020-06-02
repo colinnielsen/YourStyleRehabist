@@ -20,15 +20,18 @@ const Page4Container = styled.section`
 
 const ReviewContainer = styled.div`
    @media only screen and (max-width: 800px) {
-      width: 90%;
+      width: 90% !important;
       padding: 15px;
       margin-top: 0;
       margin-left: 50%;
       transform: translate(-50%,0);
    }
+   @media only screen and (max-width: 1650px) {
+      width: 450px;
+   }
    width: 600px;
    font-family: Inria;
-   font-size: 22px;
+   font-size: 20px;
    margin: 30px;
    margin-top: 80px;
 `;
@@ -51,8 +54,8 @@ const Gradient = styled.div`
       display: none;
    }
    position: absolute;
-   width: 500px;
-   height: 400px;
+   width: 100%;
+   height: 100%;
    z-index: 1;
    background: linear-gradient(89.39deg, rgba(181, 168, 152, 0.82) -0.52%, 
       rgba(181, 168, 152, 0.6314) -0.5%,
@@ -62,7 +65,7 @@ const Gradient = styled.div`
 const SplashText = styled.div`
    @media only screen and (max-width: 800px) {
       transform: none;
-      margin-top: 20vh;
+      margin-top: -16vh;
       font-size: 28px;
       width: 80vw;
       margin-left: 50%;
@@ -74,9 +77,9 @@ const SplashText = styled.div`
    }
    position: absolute;
    font-family: Inria_bold;
-   font-size: 50px;
+   font-size: 42px;
    right: 0;
-   line-height: 72px;
+   line-height: 61px;
    text-align: center;
    letter-spacing: -0.02em;
    color: #F2F2F2;
@@ -88,13 +91,16 @@ const SplashText = styled.div`
 
 const ImageAndText = styled.div`
    @media only screen and (max-width: 800px) {
-      margin-top: 25vh;
+      // margin-top: 25vh;
       right: 0;
       left: 0;
+      width: auto;
+      // position: 
    }
+   width: 32vw;
    position: absolute;
    right: 15vw;
-   top: 475vh;
+   margin-top: 10vh;
 `;
 
 const QuoteEnd = styled.div`
@@ -104,14 +110,24 @@ const QuoteEnd = styled.div`
    margin-top: 20px;
 `;
 
+const Row = styled.div`
+   @media only screen and (max-width: 800px) {
+      flex-flow: column wrap;
+   }
+   display: flex;
+   flex-flow: row nowrap;
+`;
+
 const Page4 = () =>
    <>
       <Page4Container>
-         <FirstReviewContainer>
-            “I had the pleasure of working with Monika as a personal stylist. We met at the mall to shop for a dress to wear to a wedding I was attending last Fall. She was incredible!
-            <br />She picked out the cutest dresses for me to try on some that I wouldd have NEVER picked myself, but I did it anyway. We found the perfect dress for the occasion! It was one of the best shopping experiences ever. We had so muchh fun - laughing, chatting, and she taught me about how to fit to my body! Monika is the best! ♥️”
-            <QuoteEnd>by Carrie - Castle Rock</QuoteEnd>
-         </FirstReviewContainer>
+         <Row>
+            <FirstReviewContainer>
+               “I had the pleasure of working with Monika as a personal stylist. We met at the mall to shop for a dress to wear to a wedding I was attending last Fall. She was incredible!
+               <br />She picked out the cutest dresses for me to try on some that I wouldd have NEVER picked myself, but I did it anyway. We found the perfect dress for the occasion! It was one of the best shopping experiences ever. We had so muchh fun - laughing, chatting, and she taught me about how to fit to my body! Monika is the best! ♥️”
+               <QuoteEnd>by Carrie - Castle Rock</QuoteEnd>
+            </FirstReviewContainer>
+            <PlaceholderReviewContainer />
          <ImageAndText>
             <SplashText>
                What people<br />are saying...
@@ -119,16 +135,18 @@ const Page4 = () =>
             <Gradient />
             <Page4SpashImage />
          </ImageAndText>
-         <PlaceholderReviewContainer />
-         <ReviewContainer>
-            "Having trouble finding "the perfect jeans"? If you answered 'yes', then Monika's your gal! Speaking from first-hand experience, after trying on dozens of jeans for just the right hue, fit and finish... Monika saved the day - or in my case, the outfit. We shopped together, found the perfect fit and hue and then... she personally made them look weathered by hand. Personalized jeans for my Vegas outfit!
-            <QuoteEnd>by Deanna - Highlands Ranch</QuoteEnd>
-         </ReviewContainer>
-         <ReviewContainer>
-            “Monika is wonderful to work with both as an organizer and personal shopper. Her keen eye for fashion and wide knowledge of style and what works for my body type makes shopping with her a breeze.
-            <br />I have worked with her to organize my closet and she makes an overwhelming job relatively easy and painless.
-            <QuoteEnd>by Julie - Arlington</QuoteEnd>
-         </ReviewContainer>
+         </Row>
+         <Row>
+            <ReviewContainer>
+               "Having trouble finding "the perfect jeans"? If you answered 'yes', then Monika's your gal! Speaking from first-hand experience, after trying on dozens of jeans for just the right hue, fit and finish... Monika saved the day - or in my case, the outfit. We shopped together, found the perfect fit and hue and then... she personally made them look weathered by hand. Personalized jeans for my Vegas outfit!
+               <QuoteEnd>by Deanna - Highlands Ranch</QuoteEnd>
+            </ReviewContainer>
+            <ReviewContainer>
+               “Monika is wonderful to work with both as an organizer and personal shopper. Her keen eye for fashion and wide knowledge of style and what works for my body type makes shopping with her a breeze.
+               <br />I have worked with her to organize my closet and she makes an overwhelming job relatively easy and painless.
+               <QuoteEnd>by Julie - Arlington</QuoteEnd>
+            </ReviewContainer>
+         </Row>
       </Page4Container>
    </>;
 

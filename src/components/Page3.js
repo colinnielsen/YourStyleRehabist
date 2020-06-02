@@ -42,12 +42,12 @@ const ProgressLine = styled.div`
    width: 5px;
    z-index: 4;
    background-color: #e0dcdc;
-   height: 300px;
+   height: 30vh;
 `;
 
 const ProgressMarker = styled.div`
-   width: 75px;
-   height: 75px;
+   width: 4vw;
+   height: 4vw;
    z-index: 4;
    border-radius: 50%;
    background-color: #e0dcdc;
@@ -69,18 +69,22 @@ const ProgressionBarContainer = styled.div`
 
 const FirstStep = styled.div`
    @media only screen and (max-width: 800px) {
-      margin: 0;
+      margin-left: 0 !important;
       left: 50%;
       transform: translate(-50%,-50%);
       margin-top: 50vh;
-      width: 90%;
+      width: 90% !important;
       font-size: 18px;
+   }
+   @media only screen and (max-width: 1200px) {
+      margin-left: 5vw;
+      width: 300px;
    }
    position: absolute;  
    margin: 40px;
    padding: 20px;
    width: 425px;
-   left: 15vw;
+   margin-left: 15vw;
    margin-top: 40vh;
    z-index: 2;
    background: #DBD1C7;
@@ -122,15 +126,19 @@ const SecondStep = styled.div`
       left: 50%;
       transform: translate(-50%,-50%);
       margin-top: 100vh;
-      width: 90%;
+      width: 90% !important;
       font-size: 18px;
+   }
+   @media only screen and (max-width: 1200px) {
+      right: 2vw;
+      width: 300px;
    }
    position: absolute;  
    margin: 40px;
    padding: 20px;
    width: 425px;
    right: 10%;
-   margin-top: 75vh;
+   margin-top: 80vh;
    z-index: 2;
    background: #DBD1C7;
    font-family: Inria_bold;
@@ -158,8 +166,12 @@ const ThirdStep = styled.div`
       left: 50%;
       transform: translate(-50%,-50%);
       margin-top: 150vh;
-      width: 90%;
+      width: 90% !important;
       font-size: 20px;
+   }
+   @media only screen and (max-width: 1200px) {
+      right: 2vw;
+      width: 300px;
    }
    position: absolute;  
    margin: 40px;
@@ -196,8 +208,8 @@ const H1 = styled.div`
 const Gradient = styled.div`
    z-index: 1;
    position: absolute;
-   width: 500px;
-   height: 700px;
+   width: 400px;
+   height: 600px;
    background: 
    linear-gradient(89.57deg, rgba(181, 168, 152, 0.61) -0.52%,
    rgba(181, 168, 152, 0.4697) -0.5%,
@@ -220,8 +232,10 @@ const SecondSplashText = styled(SplashText)`
       width: 100vw;
       left: 0;
    }
+   z-index: 5;
+   font-size: 48px;
    background: #462631;
-   margin-top: 160vh;
+   margin-top: 162vh;
    left: 2vw;
 `;
 
@@ -238,15 +252,15 @@ const SecondDisplay = styled.div`
    }
    padding: 50px;
    color: white;
-   line-height: 35px;
+   line-height: 30px;
    position: absolute;
    font-family: Inria;
-   font-size: 24px;
+   font-size: 18px;
    margin-top: 180vh;
-   height: 626px;
-   width: 950px;
+   height: 580px;
+   width: 750px;
    background: #C5B9AD;
-   right: 7%;
+   right: 10%;
 `;
 
 const SecondDisplayH1 = styled(H1)`
@@ -274,6 +288,10 @@ const Line = styled.div`
    border: 3px solid #82786E;
 `;
 
+const FinalProgressLine = styled(ProgressLine)`
+   height: 100px;
+`;
+
 const ProgressionBar = () =>
    <ProgressionBarContainer>
       <ProgressMarker />
@@ -281,7 +299,7 @@ const ProgressionBar = () =>
       <ProgressMarker />
       <ProgressLine />
       <ProgressMarker />
-      <ProgressLine />
+      <FinalProgressLine />
    </ProgressionBarContainer>;
 
 

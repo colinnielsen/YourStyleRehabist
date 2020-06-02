@@ -9,7 +9,7 @@ export default () =>
          query {
             file(relativePath: { eq: "splash1.jpg" }) {
                childImageSharp {
-                  fixed(width: 500, height: 700) {
+                  fixed(width: 400, height: 600) {
                      ...GatsbyImageSharpFixed
                   }
                }

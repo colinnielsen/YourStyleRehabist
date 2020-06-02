@@ -6,17 +6,18 @@ export default () =>
    <StaticQuery
       query={
          graphql`
-         query {
-            file(relativePath: { eq: "splash2.jpg" }) {
-               childImageSharp {
-                  fixed(width: 500, height: 400) {
-                     ...GatsbyImageSharpFixed
+            query {
+               file(relativePath: { eq: "splash2.jpg" }) {
+                  childImageSharp {
+                     fluid(maxWidth: 500) {
+                        ...GatsbyImageSharpFluid
+                     }
                   }
                }
             }
-         }
-      `}
+         `
+      }
       render={data =>
-         <Img fixed={data.file.childImageSharp.fixed} className='hideIfMobile' />
+         <Img fluid={data.file.childImageSharp.fluid} className='hideIfMobile' />
       }
    />;

@@ -71,7 +71,7 @@ const SplashBox = styled.div`
    }
    position: absolute;  
    margin: 40px;
-   margin-left: 10vw;
+   margin-left: 8vw;
    z-index: 4;
    height: 250px;
    width: 400px;

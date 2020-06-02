@@ -55,19 +55,19 @@ const SplashText = styled.div`
    margin-left: 20px;
    margin-top: 80px;
    font-family: Inria_italic;
-   font-size: 70px;
+   font-size: 58px;
 `;
 
 const DescriptorText = styled.div`
    @media only screen and (max-width: 800px) {
-      font-size: 22px;
+      font-size: 20px;
       line-height: 30px;
       padding: 10px;
       margin-top: 15px;
    }
    font-family: Inria;
-   font-size: 31px;
-   line-height: 40px;
+   font-size: 20px;
+   line-height: 30px;
    color: #FFF;
    padding: 20px;
    margin-top: 35px;
@@ -78,7 +78,6 @@ const Text = styled.div`
       width: 90vw;
    }
    padding: 30px;
-   width: 1000px;
    height: 700px;
    position: absolute;
    z-index: 2;
@@ -92,7 +91,7 @@ const Line = styled.div`
       transform: translate(-50%,-50%);
    }
    height: 3px;
-   width: 600px;
+   width: 60%;
    margin-top: 20px;
    margin-left: 180px;
    border: 3px solid #462631;
@@ -106,9 +105,9 @@ const FinalQuote = styled.div`
    }
    font-family: Inria_italic;
    color: #FFF;
-   font-size: 36px;
+   font-size: 30px;
    padding: 30px;
-   margin-top: 60px;
+   // margin-top: 60px;
    text-align: center;
 `;
 
@@ -130,7 +129,7 @@ const ContactContainer = styled.div`
    align-items: center;
    justify-content: center;
    background: #462631;
-   width: 400px;
+   width: 350px;
    height: 220px;
 `;
 
@@ -140,7 +139,7 @@ const Button = styled.div`
       font-size: 16px;
       height: 55px;
    }
-   width: 270px;
+   width: 200px;
    height: 70px;
    display: flex;
    margin: 10px;
@@ -150,7 +149,7 @@ const Button = styled.div`
    color: #fff;
    text-align: center;
    padding: 12px 16px;
-   font-size: 22px;
+   font-size: 18px;
    background-color: #FFFFFF;
    border-radius: 5px; 
    cursor: pointer;

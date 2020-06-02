@@ -33,7 +33,8 @@ const ContentContainer = styled.div`
 
 const ImageContainer = styled.div`
    @media only screen and (max-width: 800px) {
-      transform: none;
+      transform: translate(0,-5vh);
+      z-index: 2;
       display: flex;
       align-items: top;
       justify-content: center;
@@ -70,6 +71,7 @@ const SplashBox = styled.div`
    }
    position: absolute;  
    margin: 40px;
+   margin-left: 8vw;
    z-index: 4;
    height: 250px;
    width: 400px;
@@ -105,12 +107,12 @@ const SplashColorBox = styled.div`
 
 const SplashTextBox = styled.div`
    @media only screen and (max-width: 800px) {
-      font-size: 30px;
+      font-size: 24px;
       line-height: 35px;
    }
    font-family: Inria;
-   font-size: 46px;
-   line-height: 55px;
+   font-size: 34px;
+   line-height: 34px;
    letter-spacing: -0.05em;
    color: #F9F9F9;
    width: 320px;
@@ -129,14 +131,15 @@ const Line = styled.div`
 const ExplainationText = styled.div`
    @media only screen and (max-width: 800px) {
       margin: 0;
-      font-size: 20px;
-      line-height: 28px;
+      font-size: 18px;
+      line-height: 26px;
       margin-top: 20px;
    }
    margin-top: 25px;
    font-family: Inria;
-   font-size: 29px;
-   line-height: 35px;
+   font-size: 24px;
+   padding: 10px;
+   line-height: 32px;
    letter-spacing: -0.05em;
    color: #F9F9F9;
 `;

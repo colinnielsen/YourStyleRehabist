@@ -61,7 +61,7 @@ const ProgressionBarContainer = styled.div`
    justify-content: center;
    align-items: center;
    position: absolute;
-   top: 250vh;
+   margin-top: 150vh;
    left: calc(50% - 37.5px);
 `;
 

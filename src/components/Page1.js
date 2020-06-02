@@ -8,6 +8,8 @@ const Page1Container = styled.div`
       flex-direction: column;
    }
    height: 100vh;
+   max-height: 100vh;
+   overflow-y: hidden;
    width: 100vw;
    display: flex;
    align-items: center;
@@ -27,7 +29,8 @@ const ProfileContainer = styled.div`
    @media only screen and (max-width: 800px) {
       width: 250px;
       height: 250px;
-      transform: translate(0,20px)
+      transform: translate(-7px,-7px);
+      // background: none; 
    }
    width: 400px;
    height: 400px;
@@ -36,43 +39,49 @@ const ProfileContainer = styled.div`
 
 const LandingInfo = styled.div`
    @media only screen and (max-width: 800px) {
-      margin-left: 0px;
+      margin: 0;
       height: auto;
       width: auto;
    }
    display: block;
    justify-content: center;
    align-items: space-around;
-   margin-left: 75px;
+   margin: 8%;
    width: 40%;
-   height: 400px;
+   height: auto;
 `;
 
 const Name = styled.div`
    @media only screen and (max-width: 800px) {
       display: none;
    }
+   @media only screen and (max-width: 1200px) {
+      font-size: 48px;
+   }
    font-family: 'Inria_bold';
-   font-size: 80px;
+   font-size: 68px;
    display: inline-block;
    height: 80px;
+   line-height: 60px;
+   width: 100%;
+   white-space: nowrap;
    color: #5E2828;
 `;
 
 const SplashBox = styled.div`
    @media only screen and (max-width: 800px) {
       width: 300px;
-      font-size: 40px;
+      font-size: 24px;
       text-align: center;
       padding: 0;
       padding: 20px;
       margin: 0;
       float: none;
-      line-height: 62px;
-      transform: translate(0,30px)
+      line-height: 40px;
+      transform: translate(0,30px);
    }
    margin-left: 100px;
-   width: 600px;
+   width: 40vw;
    float: right;
    position: relative;
    display: block;
@@ -80,26 +89,30 @@ const SplashBox = styled.div`
    padding-right: 50px;
    align-items: center;
    justify-content: center;
-   font-size: 55px;
+   font-size: 40px;
    font-weight: 300;
    text-align: right;
-   line-height: 72px;
+   line-height: 52px;
    font-family: 'Inria_lightItalic';
    background: linear-gradient(90deg, #F2F2F1 0%, rgba(242, 242, 241, 0.86) 140.78%);
    color: #873954;
 `;
 
 const P = styled.div`
+   @media only screen and (max-width: 800px) {
+      font-size: 18px;
+      line-height: 24px;
+   }
    margin-top: 30px;
    margin-bottom: 30px;
-   font-size: 30px;
+   font-size: 26px;
    line-height: 40px;
    text-align: center;
 `;
 
 const Line = styled.div`
    height: 3px;
-   width: 400px;
+   width: 90%;
    border: 3px solid #82786E;
    margin-left: 50%;
    transform: translate(-50%);

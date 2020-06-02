@@ -23,6 +23,7 @@ const SplashText = styled.div`
       width: 350px;
       padding: 20px;
       font-size: 40px;
+      z-index: 4;
    }
    position: absolute;
    margin-top: 30px;
@@ -47,6 +48,7 @@ const ProgressLine = styled.div`
 const ProgressMarker = styled.div`
    width: 75px;
    height: 75px;
+   z-index: 4;
    border-radius: 50%;
    background-color: #e0dcdc;
 `;
@@ -61,7 +63,7 @@ const ProgressionBarContainer = styled.div`
    justify-content: center;
    align-items: center;
    position: absolute;
-   margin-top: 150vh;
+   margin-top: 50vh;
    left: calc(50% - 37.5px);
 `;
 
@@ -72,19 +74,19 @@ const FirstStep = styled.div`
       transform: translate(-50%,-50%);
       margin-top: 50vh;
       width: 90%;
-      font-size: 20px;
+      font-size: 18px;
    }
    position: absolute;  
    margin: 40px;
    padding: 20px;
    width: 425px;
    left: 15vw;
-   margin-top: 30vh;
+   margin-top: 40vh;
    z-index: 2;
    background: #DBD1C7;
    font-family: Inria_bold;
    font-style: normal;
-   font-size: 24px;
+   font-size: 18px;
    justify-content: center;
    letter-spacing: -0.02em;
    font-family: Inria;
@@ -105,7 +107,7 @@ const Label = styled.div`
    align-items: center;
    justify-content: center;
    color: #F9F9F9;
-   font-size: 40px;
+   font-size: 34px;
    transform: translate(-60px, -60px);
 `;
 
@@ -119,21 +121,21 @@ const SecondStep = styled.div`
       margin: 0;
       left: 50%;
       transform: translate(-50%,-50%);
-      margin-top: 40vh;
+      margin-top: 100vh;
       width: 90%;
-      font-size: 20px;
+      font-size: 18px;
    }
    position: absolute;  
    margin: 40px;
    padding: 20px;
    width: 425px;
    right: 10%;
-   top: 270%;
+   margin-top: 75vh;
    z-index: 2;
    background: #DBD1C7;
    font-family: Inria_bold;
    font-style: normal;
-   font-size: 24px;
+   font-size: 18px;
    justify-content: center;
    letter-spacing: -0.02em;
    font-family: Inria;
@@ -155,7 +157,7 @@ const ThirdStep = styled.div`
       margin: 0;
       left: 50%;
       transform: translate(-50%,-50%);
-      margin-top: 57vh;
+      margin-top: 150vh;
       width: 90%;
       font-size: 20px;
    }
@@ -164,12 +166,12 @@ const ThirdStep = styled.div`
    padding: 20px;
    width: 425px;
    right: 10%;
-   margin-top: 110vh;
+   margin-top: 120vh;
    z-index: 2;
    background: #DBD1C7;
    font-family: Inria_bold;
    font-style: normal;
-   font-size: 24px;
+   font-size: 18px;
    justify-content: center;
    letter-spacing: -0.02em;
    font-family: Inria;

@@ -4,7 +4,10 @@ import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 
 const ImageTransform = styled.div`
-   transform: translate(30px, 30px)
+   @media only screen and (max-width: 800px) {
+      transform: translate(7px,7px);
+   }
+   transform: translate(30px, 30px);
 `;
 
 export default () =>

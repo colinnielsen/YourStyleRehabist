@@ -30,7 +30,6 @@ const ProfileContainer = styled.div`
       width: 250px;
       height: 250px;
       transform: translate(-7px,-7px);
-      // background: none; 
    }
    width: 400px;
    height: 400px;
@@ -66,6 +65,7 @@ const Name = styled.div`
    width: 100%;
    white-space: nowrap;
    color: #5E2828;
+   transform: translate(-5vw);
 `;
 
 const SplashBox = styled.div`
@@ -89,13 +89,22 @@ const SplashBox = styled.div`
    padding-right: 50px;
    align-items: center;
    justify-content: center;
-   font-size: 40px;
+   font-size: 28px;
    font-weight: 300;
-   text-align: right;
-   line-height: 52px;
-   font-family: 'Inria_lightItalic';
+   text-align: center;
+   line-height: 38px;
+   font-family: 'Inria_bold';
    background: linear-gradient(90deg, #F2F2F1 0%, rgba(242, 242, 241, 0.86) 140.78%);
    color: #873954;
+`;
+
+const Subheader = styled.div`
+   @media only screen and (max-width: 800px) {
+      translate: none;
+   }
+   font-family: Inria_italic;
+   transform: translate(10%);
+   font-size: 28px;
 `;
 
 const P = styled.div`
@@ -103,9 +112,10 @@ const P = styled.div`
       font-size: 18px;
       line-height: 24px;
    }
-   margin-top: 30px;
+   font-family: Inria;
+   margin-top: 10px;
    margin-bottom: 30px;
-   font-size: 26px;
+   font-size: 22px;
    line-height: 40px;
    text-align: center;
 `;
@@ -128,11 +138,14 @@ const Page1 = () =>
             <LandingInfo>
                <Name>Your Style Rehabist</Name>
                <SplashBox>
-                  I'm Monika Nielsen
-                  <br /> Your Style Rehabist.
+                  I'm Monika Nielsen -
+                     Your Style Rehabist. 
+                  <br />
+                  <Subheader>
+                  </Subheader>
                   <P>I specialize in the 3 C's.
                      <br />
-                     Cleansing and Clarifying your closet to create a Capsulated wardrobe.
+                     Cleansing and Clarifying your closet <br /> to create a Capsulated wardrobe.
                      <br />
                      I will take the chaos of your closet into calm in your life - so you're no longer standing and staring at the things you never wear.
                   </P>

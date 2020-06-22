@@ -180,7 +180,7 @@ const Page5 = () =>
             </DescriptorText>
             <Line />
             <FinalQuote>
-               I work in 2 hour increments, based on <br />your needs.
+               Click here for pricing and packages.
             </FinalQuote>
          </Text>
          <Gradient />

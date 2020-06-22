@@ -5,7 +5,7 @@ import DivClip from './divClip.js';
 
 const Page3Container = styled.section`
    @media only screen and (max-width: 800px) {
-      height: 330vh;
+      height: 300vh;
    }
    height: 250vh;
    width: 100vw;
@@ -314,7 +314,7 @@ const Page2 = () =>
             <FirstStepLabel>
                Cleanse and Edit
             </FirstStepLabel>
-            A 2-hour appointment, with the goal of pulling clothing from your closet that are in great condition but you are no longer wearing. Did you know that statistically we wear 23% of our wardrobe? Let me help! We'll create space in your closet so you can breathe. Pulling the things that don't work, making sure those get donated to local nonprofits, getting them into the right hands.
+            A 2-hour appointment, with the goal of pulling clothing from your closet that is g in great condition but you are no longer wearing. Did you know that statistically we wear 23% of our wardrobe? Let me help! We'll create space in your closet so you can breathe. Pulling the things that don't work, making sure they get donated to local nonprofits, getting them into the right hands.
       </FirstStep>
          <SecondStep>
             <SecondStepLabel>
@@ -327,7 +327,7 @@ const Page2 = () =>
             <ThirdStepLabel>
                Are you on a quest?
             </ThirdStepLabel>
-            Are you on a quest for something specific but don't have time? The perfect dress for an event? The perfect pair of denim for girls weekend? I have my finger on the pulse of local boutiques so we can support our fellow women in business!
+            Are you on a quest for something specific but don't have time? The perfect dress for an event? The perfect denim for girls weekend? I have my finger on the pulse of local boutiques so we can support our fellow women in business!
       </ThirdStep>
          <ProgressionBar />
          <ImageContainer>

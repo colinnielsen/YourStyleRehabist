@@ -124,7 +124,7 @@ const Page4 = () =>
          <Row>
             <FirstReviewContainer>
                “I had the pleasure of working with Monika as a personal stylist. We met at the mall to shop for a dress to wear to a wedding I was attending last Fall. She was incredible!
-               <br />She picked out the cutest dresses for me to try on some that I wouldd have NEVER picked myself, but I did it anyway. We found the perfect dress for the occasion! It was one of the best shopping experiences ever. We had so muchh fun - laughing, chatting, and she taught me about how to fit to my body! Monika is the best! ♥️”
+               <br />She picked out the cutest dresses for me to try on some that I would have NEVER picked myself, but I did it anyway. We found the perfect dress for the occasion! It was one of the best shopping experiences ever. We had so muchh fun - laughing, chatting, and she taught me about how to fit to my body! Monika is the best! ♥️”
                <QuoteEnd>by Carrie - Castle Rock</QuoteEnd>
             </FirstReviewContainer>
             <PlaceholderReviewContainer />

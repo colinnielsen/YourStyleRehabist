@@ -152,11 +152,16 @@ const ExplainationText = styled.div`
 `;
 
 const Page2 = () => {
-   const [width, setWidth] = useState(window.innerWidth);
+   const [width, setWidth] = useState();
+   const isClient = typeof window === 'object';
 
-   const handleResize = () => {console.log(window.innerWidth);setWidth(window.innerWidth);}
+   const handleResize = () => {console.log(window.innerWidth); setWidth(window.innerWidth);}
 
    useEffect(() => {
+      if (!isClient) {
+         return false;
+      }
+      handleResize();
       window.addEventListener('resize', handleResize);
       return () => window.removeEventListener('resize', handleResize);
    },[]);

@@ -5,7 +5,10 @@ import DivClip from './divClip.js';
 
 const Page3Container = styled.section`
    @media only screen and (max-width: 800px) {
-      height: 330vh;
+      height: auto;
+      overflow; auto;
+      flex-direction: column;
+      align-items: center;
    }
    height: 250vh;
    width: 100vw;
@@ -18,17 +21,16 @@ const Page3Container = styled.section`
 const SplashText = styled.div`
    @media only screen and (max-width: 800px) {
       margin: 0;
-      margin-left: 50%;
-      transform: translate(-50%,-50%);
-      width: 350px;
+      transform: translate(0,-50%);
+      width: auto;
       padding: 20px;
-      font-size: 40px;
-      z-index: 4;
+      font-size: 2.5rem;
+      z-index: 9;
    }
    position: absolute;
    margin-top: 30px;
    margin-left: 80px;
-   font-family: Inria_bold;
+   font-family: Inria_italic;
    font-size: 60px;
    line-height: 72px;
    text-align: center;
@@ -67,20 +69,17 @@ const ProgressionBarContainer = styled.div`
    left: calc(50% - 37.5px);
 `;
 
-const FirstStep = styled.div`
+const Step = styled.div`
    @media only screen and (max-width: 800px) {
-      margin-left: 0 !important;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      margin-top: 50vh;
+      margin: 80px 0 0 0 !important;
       width: 90% !important;
       font-size: 18px;
+      position: inherit;
    }
    @media only screen and (max-width: 1200px) {
-      margin-left: 5vw;
       width: 300px;
    }
-   position: absolute;  
+   position: absolute;
    margin: 40px;
    padding: 20px;
    width: 425px;
@@ -98,11 +97,23 @@ const FirstStep = styled.div`
    color: #000000;
 `;
 
+const FirstStep = styled(Step)`
+   @media only screen and (max-width: 800px) {
+      margin: 120px 0 0 0 !important;
+   }
+   @media only screen and (max-width: 1200px) {
+      margin-left: 5vw;
+      width: 300px;
+   }
+   margin-left: 15vw;
+   margin-top: 40vh;
+`;
+
 const Label = styled.div`
    @media only screen and (max-width: 800px) {
       transform: translate(-30px,-60px);
       width: 320px;
-      font-size: 34px;
+      font-size: 1.9rem;
    }
    background: #C5B9AD;
    width: 350px;
@@ -120,75 +131,31 @@ const FirstStepLabel = styled(Label)`
    margin-bottom: -40px;
 `;
 
-const SecondStep = styled.div`
-   @media only screen and (max-width: 800px) {
-      margin: 0;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      margin-top: 100vh;
-      width: 90% !important;
-      font-size: 18px;
-   }
+const SecondStep = styled(Step)`
    @media only screen and (max-width: 1200px) {
       right: 2vw;
-      width: 300px;
    }
-   position: absolute;  
-   margin: 40px;
-   padding: 20px;
-   width: 425px;
    right: 10%;
    margin-top: 80vh;
-   z-index: 2;
-   background: #DBD1C7;
-   font-family: Inria_bold;
-   font-style: normal;
-   font-size: 18px;
-   justify-content: center;
-   letter-spacing: -0.02em;
-   font-family: Inria;
-   letter-spacing: -0.05emw;
-   color: #000000;
 `;
 
 const SecondStepLabel = styled(Label)`
    @media only screen and (max-width: 800px) {
-      transform: translate(10px, -60px) !important;
+      transform: translate(-30px, -60px); !important;
    }
    height: 100px;
    line-height: 40px;
    margin-bottom: -40px;
 `;
 
-const ThirdStep = styled.div`
+const ThirdStep = styled(Step)`
    @media only screen and (max-width: 800px) {
-      margin: 0;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      margin-top: 150vh;
-      width: 90% !important;
-      font-size: 20px;
+      margin: 80px 0 100px 0 !important;
    }
    @media only screen and (max-width: 1200px) {
       right: 2vw;
-      width: 300px;
    }
-   position: absolute;  
-   margin: 40px;
-   padding: 20px;
-   width: 425px;
-   right: 10%;
    margin-top: 120vh;
-   z-index: 2;
-   background: #DBD1C7;
-   font-family: Inria_bold;
-   font-style: normal;
-   font-size: 18px;
-   justify-content: center;
-   letter-spacing: -0.02em;
-   font-family: Inria;
-   letter-spacing: -0.05emw;
-   color: #000000;
 `;
 
 const ThirdStepLabel = styled(Label)`
@@ -219,6 +186,7 @@ const Gradient = styled.div`
 const ImageContainer = styled.div`
    @media only screen and (max-width: 800px) {
       display: none;
+      positon: inherit;
    }
    position: absolute;
    margin-top: 85vh;
@@ -227,7 +195,7 @@ const ImageContainer = styled.div`
 
 const SecondSplashText = styled(SplashText)`
    @media only screen and (max-width: 800px) {
-      margin-top: 205vh;
+      position: inherit;
       font-size: 34px;
       width: 100vw;
       left: 0;
@@ -242,13 +210,15 @@ const SecondSplashText = styled(SplashText)`
 const SecondDisplay = styled.div`
    @media only screen and (max-width: 800px) {
       width: 95%;
-      left: 50%;
-      transform: translate(-50%);
-      font-size: 18px;
-      margin-top: 220vh;
+      height: auto;
+      margin-bottom: 80px;
+      font-size: 1rem;
+      margin-top: auto;
       padding: 10px;
-      right: 0;
+      padding-bottom: 30px;
+      right: auto;
       line-height: 25px;
+      position: inherit;
    }
    padding: 50px;
    color: white;
@@ -265,7 +235,7 @@ const SecondDisplay = styled.div`
 
 const SecondDisplayH1 = styled(H1)`
    @media only screen and (max-width: 800px) {
-      font-size: 28px;
+      font-size: 1.8rem;
       line-height: 30px;
       margin: 0;
       margin-bottom: 20px;

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import SplashImage from './Page2SplashImage';
+import StyledBackgroundSection from './BackgroundImageScreen2';
 
 const Page2Container = styled.section`
    @media only screen and (max-width: 800px) {
@@ -26,6 +27,7 @@ const ContentContainer = styled.div`
       transform: none;
       flex-flow: column wrap;
       height: 105vh;
+      position: inherit;
    }
    align-items: center;
    justify-content: center;
@@ -88,6 +90,11 @@ const SplashBox = styled.div`
    letter-spacing: -0.02em;
 `;
 
+const MobileSplashBox = styled(SplashBox)`
+   top: 0;
+
+`;
+
 const SplashColorBox = styled.div`
    @media only screen and (max-width: 800px) {
       transform: none;
@@ -95,7 +102,7 @@ const SplashColorBox = styled.div`
       position: absolute;
       padding: 15px;
       height: 405px;
-      margin-top: -10px;
+      margin-top: 5px;
    }
    background: #C5B9AD;
    z-index: 2;
@@ -107,7 +114,7 @@ const SplashColorBox = styled.div`
 
 const SplashTextBox = styled.div`
    @media only screen and (max-width: 800px) {
-      font-size: 24px;
+      font-size: 1.8rem;
       line-height: 35px;
    }
    font-family: Inria;
@@ -120,7 +127,7 @@ const SplashTextBox = styled.div`
 
 const Line = styled.div`
    @media only screen and (max-width: 800px) {
-      margin: 0;
+      margin: .2rem;
    }
    height: 3px;
    width: 90%;
@@ -131,8 +138,8 @@ const Line = styled.div`
 const ExplainationText = styled.div`
    @media only screen and (max-width: 800px) {
       margin: 0;
-      font-size: 18px;
-      line-height: 26px;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
       margin-top: 20px;
    }
    margin-top: 25px;
@@ -144,28 +151,54 @@ const ExplainationText = styled.div`
    color: #F9F9F9;
 `;
 
-const Page2 = () =>
-   <Page2Container>
-      <ContentContainer>
-         <ImageContainer>
-            <SplashBox>
-               What I do for you -
-            </SplashBox>
-            <Gradient />
-            <SplashImage />
-         </ImageContainer>
-         <SplashColorBox>
-            <SplashTextBox>
-               “You should be<br /> able to get ready<br /> in 10 minutes...”
-            <Line />
-            </SplashTextBox>
-            <ExplainationText>
-               ...feeling amazing with clothing that you know fits you well and you look good in. Walking out the door feeling confident and fierce, ready to walk into any room- command that meeting, show up at the party, close the deal, make the new friend.
-            </ExplainationText>
-         </SplashColorBox>
-      </ContentContainer>
-   </Page2Container>
+const Page2 = () => {
+   const [width, setWidth] = useState(window.innerWidth);
 
+   const handleResize = () => {console.log(window.innerWidth);setWidth(window.innerWidth);}
 
+   useEffect(() => {
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+   },[]);
+
+   const Container = () => 
+      <Page2Container>
+         <ContentContainer>
+            {width > 800 ?
+               <ImageContainer>
+                  <SplashBox>
+                     What I do for you -
+                  </SplashBox>
+                  <Gradient />
+                  <SplashImage />
+               </ImageContainer> :
+               <MobileSplashBox>
+                  What I do for you -
+               </MobileSplashBox>
+            }
+            <SplashColorBox>
+               <SplashTextBox>
+                  “You should be<br /> able to get ready<br /> in 10 minutes...”
+               <Line />
+               </SplashTextBox>
+               <ExplainationText>
+                  ...feeling amazing with clothing that you know fits you well and you look good in. Walking out the door feeling confident and fierce, ready to walk into any room- command that meeting, show up at the party, close the deal, make the new friend.
+               </ExplainationText>
+            </SplashColorBox>
+         </ContentContainer>
+      </Page2Container>;
+
+   return (
+      <>
+         {width < 800
+            ? <StyledBackgroundSection>
+               {console.log('less than 800')}
+                  <Container />
+               </StyledBackgroundSection>
+            : <Container />
+         }
+      </>
+   );
+}
 
 export default Page2;

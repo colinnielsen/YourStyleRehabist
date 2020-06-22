@@ -139,6 +139,7 @@ const Button = styled.div`
       font-size: 16px;
       height: 55px;
    }
+   box-shadow: 0px 1px 2px rgba(46,41,51,0.08), 0px 2px 4px rgba(71,63,79,0.08);
    width: 200px;
    height: 70px;
    display: flex;
@@ -180,8 +181,11 @@ const Page5 = () =>
             </DescriptorText>
             <Line />
             <FinalQuote>
-               I work in 2 hour increments, based on <br />your needs.
+               Click here for packages and pricing.
             </FinalQuote>
+            <Button>
+               Pricing
+            </Button>
          </Text>
          <Gradient />
          <Page5SpashImage />

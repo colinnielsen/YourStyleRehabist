@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import StyledBackgroundSection from './BackgroundImage';
+import StyledBackgroundSection from './BackgroundImageScreen1';
 import _ProfilePic from './ProfilePic';
 
 const Page1Container = styled.div`
@@ -26,9 +26,9 @@ const ProfilePic = styled(_ProfilePic)`
 `;
 
 const ProfileContainer = styled.div`
-   @media only screen and (max-width: 800px) {
-      width: 250px;
-      height: 250px;
+   @media all and (max-width: 500px) {
+      width: 200px;
+      height: 200px;
       transform: translate(-7px,-7px);
    }
    width: 400px;
@@ -62,7 +62,7 @@ const Name = styled.div`
    display: inline-block;
    height: 80px;
    line-height: 60px;
-   width: 100%;
+   width: 90vw;
    white-space: nowrap;
    color: #5E2828;
    transform: translate(-5vw);
@@ -70,16 +70,18 @@ const Name = styled.div`
 
 const SplashBox = styled.div`
    @media only screen and (max-width: 800px) {
-      width: 300px;
-      font-size: 24px;
+      width: 80vw;
+      font-size: 2rem;
       text-align: center;
       padding: 0;
+      height: auto;
       padding: 20px;
       margin: 0;
       float: none;
-      line-height: 40px;
-      transform: translate(0,30px);
+      line-height: 45px;
+      transform: translate(0, 40px);
    }
+   height: 40vh;
    margin-left: 100px;
    width: 40vw;
    float: right;

@@ -159,7 +159,7 @@ const Page2 = () => {
    const Container = () => 
       <Page2Container>
          <ContentContainer>
-            {size.width > 800
+            {size.width < 800
                ? <ImageContainer>
                   <SplashBox>
                      What I do for you -

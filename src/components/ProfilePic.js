@@ -18,7 +18,7 @@ export default () =>
                file(relativePath: { eq: "mom.jpg" }) {
                   childImageSharp {
                      fluid(maxWidth: 400) {
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_noBase64
                      }
                   }
                }

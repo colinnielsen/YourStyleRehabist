@@ -10,7 +10,7 @@ export default () =>
             file(relativePath: { eq: "splash1.jpg" }) {
                childImageSharp {
                   fixed(width: 400, height: 600) {
-                     ...GatsbyImageSharpFixed
+                     ...GatsbyImageSharpFixed_withWebp
                   }
                }
             }

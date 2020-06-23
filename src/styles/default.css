@@ -10,7 +10,6 @@ body, html, section {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden !important;
   max-width: 100vw !important;
-
 }
 
 @media only screen and (max-width: 800px) {
@@ -479,11 +478,6 @@ li > p {
 @font-face {
   font-family: "Inria_italic";
   src: url("../fonts/InriaSerif-Italic.ttf");
-}
-
-@font-face {
-  font-family: "Inria_bold";
-  src: url("../fonts/InriaSerif-Bold.ttf");
 }
 
 @font-face {

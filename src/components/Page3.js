@@ -73,7 +73,7 @@ const Step = styled.div`
    @media only screen and (max-width: 800px) {
       margin: 80px 0 0 0 !important;
       width: 90% !important;
-      font-size: 18px;
+      font-size: 1rem;
       position: inherit;
    }
    @media only screen and (max-width: 1200px) {
@@ -89,7 +89,7 @@ const Step = styled.div`
    background: #DBD1C7;
    font-family: Inria_bold;
    font-style: normal;
-   font-size: 18px;
+   font-size: 1rem;
    justify-content: center;
    letter-spacing: -0.02em;
    font-family: Inria;
@@ -155,6 +155,7 @@ const ThirdStep = styled(Step)`
    @media only screen and (max-width: 1200px) {
       right: 2vw;
    }
+   right: 10%;
    margin-top: 120vh;
 `;
 

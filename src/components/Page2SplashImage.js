@@ -10,7 +10,7 @@ const SplashImage = () => (
             file(relativePath: { eq: "background2.jpg" }) {
                childImageSharp {
                   fixed(width: 1000, height: 700) {
-                     ...GatsbyImageSharpFixed
+                     ...GatsbyImageSharpFixed_withWebp
                   }
                }
             }

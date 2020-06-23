@@ -3,11 +3,17 @@ import styled from 'styled-components';
 import Page5SpashImage from './Page5SplashImage';
 import MessengerIcon from './MessengerIcon';
 import EmailIcon from './EmailIcon';
+import useWidth from '../hooks/useWidth';
+import useWindowSize from '../hooks/useWidth';
 
 const Page5Container = styled.section`
    @media only screen and (max-width: 800px) {
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
       padding: 0;
+      height: auto;
+      background: linear-gradient(89.11deg, #B5A898 -0.52%,
+         rgba(181, 168, 152, 0.77) -0.5%,
+         rgba(181, 168, 152, 0.51) 174.83%);
    }
    width: 100vw;
    height: 87vh;
@@ -22,15 +28,14 @@ const Page5Container = styled.section`
 const ImageContainer = styled.div`
    @media only screen and (max-width: 800px) {
       width: 100vw;
-      height: 96vh;
       left: 0;
       display: flex;
       justify-content: center;
+      position: relative;
    }
    width: 55vw;
    position: absolute;
    margin-top: 0vh;
-   height: ;
    left: 10vw;
 `;
 
@@ -46,7 +51,7 @@ const Gradient = styled.div`
 
 const SplashText = styled.div`
    @media only screen and (max-width: 800px) {
-      font-size: 50px;
+      font-size: 3rem;
       margin: 0;
       margin-top: 20px;
       margin-left: -10px;
@@ -60,13 +65,13 @@ const SplashText = styled.div`
 
 const DescriptorText = styled.div`
    @media only screen and (max-width: 800px) {
-      font-size: 20px;
+      font-size: 1.1rem;
       line-height: 30px;
       padding: 10px;
       margin-top: 15px;
    }
    font-family: Inria;
-   font-size: 20px;
+   font-size: 1rem;
    line-height: 30px;
    color: #FFF;
    padding: 20px;
@@ -76,6 +81,9 @@ const DescriptorText = styled.div`
 const Text = styled.div`
    @media only screen and (max-width: 800px) {
       width: 90vw;
+      position: relative;
+      height: auto;
+      padding: 6vw 0 6vw 0;
    }
    padding: 30px;
    height: 700px;
@@ -99,15 +107,14 @@ const Line = styled.div`
 
 const FinalQuote = styled.div`
    @media only screen and (max-width: 800px) {
-      font-size: 24px;
-      margin-top: 26px;
+      font-size: 1.6rem;
+      margin: 26px 0 40px 0;
       padding: 0;
    }
    font-family: Inria_italic;
    color: #FFF;
    font-size: 30px;
    padding: 30px;
-   // margin-top: 60px;
    text-align: center;
 `;
 
@@ -115,10 +122,11 @@ const ContactContainer = styled.div`
    @media only screen and (max-width: 800px) {
       flex-flow: row nowrap;
       padding: 20px;
-      margin-top: 95vh;
       width: 100vw;
       left: 0;
       height: auto;
+      position: relative;
+      margin: 0;
    }
    position: absolute;
    margin-top: 52vh;
@@ -136,7 +144,7 @@ const ContactContainer = styled.div`
 const Button = styled.div`
    @media only screen and (max-width: 800px) {
       width: auto;
-      font-size: 16px;
+      font-size: 1rem;
       height: 55px;
    }
    box-shadow: 0px 1px 2px rgba(46,41,51,0.08), 0px 2px 4px rgba(71,63,79,0.08);
@@ -150,7 +158,7 @@ const Button = styled.div`
    color: #fff;
    text-align: center;
    padding: 12px 16px;
-   font-size: 18px;
+   font-size: 1rem;
    background-color: #FFFFFF;
    border-radius: 5px; 
    cursor: pointer;
@@ -170,44 +178,59 @@ const EmailButton = styled(Button)`
    color: black;
 `;
 
-const Page5 = () =>
-   <Page5Container>
-      <ImageContainer>
-         <Text>
-            <SplashText>Imagine...</SplashText>
-            <DescriptorText>
-               getting ready quickly, feeling like you have lots of choices, feeling fiercely confident what's clothing that you know fits and you look good in.
-               <br />Now imagine being able to give to others and make a huge difference.<br /><br /> It is the ultimate and Do Good-Look Good!
-            </DescriptorText>
-            <Line />
-            <FinalQuote>
-               Click here for packages and pricing.
-            </FinalQuote>
-            <Button>
-               Pricing
-            </Button>
-         </Text>
-         <Gradient />
-         <Page5SpashImage />
-      </ImageContainer>
-      <ContactContainer>
-         <MessageButton
-            onClick={() => window.location.href = 'http://m.me/monika.nielsen.14'}
-         >
-            <MessengerIcon />
-            <Link>
-               Messenger
-            </Link>
-         </MessageButton>
-         <EmailButton
-            onClick={() => window.location.href = 'mailto:monikamnielsen@gmail.com'}
-         >
-            <EmailIcon />
-            <Link>
-               Email
-            </Link>
-         </EmailButton>
-      </ContactContainer>
-   </Page5Container>;
+const PricingButton = styled(Button)`
+   width: 250px !important;
+   color: #462631;
+   font-family: Inria_italic;
+   margin-left: 50%;
+   transform: translate(-50%);
+`;
+
+const Page5 = () => {
+   const size = useWindowSize();
+   return (
+      <Page5Container>
+         <ImageContainer>
+            <Text>
+               <SplashText>Imagine...</SplashText>
+               <DescriptorText>
+                  getting ready quickly, feeling like you have lots of choices, feeling fiercely confident what's clothing that you know fits and you look good in.
+                  <br />Now imagine being able to give to others and make a huge difference.<br /><br /> It is the ultimate and Do Good-Look Good!
+               </DescriptorText>
+               <Line />
+               <FinalQuote>
+                  Click here for packages and pricing.
+               </FinalQuote>
+               <PricingButton>
+                  Pricing
+               </PricingButton>
+            </Text>
+            {size.width > 800 && <>
+               <Gradient />
+               <Page5SpashImage />
+            </>}
+         </ImageContainer>
+         <ContactContainer>
+            <MessageButton
+               onClick={() => window.location.href = 'http://m.me/monika.nielsen.14'}
+            >
+               <MessengerIcon />
+               <Link>
+                  Messenger
+               </Link>
+            </MessageButton>
+            <EmailButton
+               onClick={() => window.location.href = 'mailto:monikamnielsen@gmail.com'}
+            >
+               <EmailIcon />
+               <Link>
+                  Email
+               </Link>
+            </EmailButton>
+         </ContactContainer>
+      </Page5Container>
+   );
+}
+   
 
 export default Page5;

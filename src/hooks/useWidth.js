@@ -8,7 +8,7 @@ function useWindowSize() {
          height: isClient ? window.innerHeight : undefined
       }
    }
-   const [windowSize, setWindowSize] = useState(getSize);
+   const [windowSize, setWindowSize] = useState(getSize());
 
    useEffect(() => {
       if (!isClient) return false;

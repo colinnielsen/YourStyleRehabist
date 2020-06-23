@@ -154,6 +154,8 @@ const ExplainationText = styled.div`
 
 const Page2 = () => {
    const size = useWindowSize();
+   console.log(size.width);
+   
    const Container = () => 
       <Page2Container>
          <ContentContainer>

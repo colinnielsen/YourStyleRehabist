@@ -31,7 +31,7 @@ const ReviewContainer = styled.div`
    }
    width: 600px;
    font-family: Inria;
-   font-size: 20px;
+   font-size: 1rem;
    margin: 30px;
    margin-top: 80px;
 `;
@@ -91,16 +91,13 @@ const SplashText = styled.div`
 
 const ImageAndText = styled.div`
    @media only screen and (max-width: 800px) {
-      // margin-top: 25vh;
       right: 0;
       left: 0;
       width: auto;
-      // position: 
    }
    width: 32vw;
    position: absolute;
    right: 15vw;
-   margin-top: 10vh;
 `;
 
 const QuoteEnd = styled.div`

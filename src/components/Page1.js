@@ -9,7 +9,7 @@ const Page1Container = styled.div`
    }
    height: 100vh;
    max-height: 100vh;
-   overflow-y: hidden;
+   overflow: hidden;
    width: 100vw;
    display: flex;
    align-items: center;
@@ -81,14 +81,13 @@ const SplashBox = styled.div`
       line-height: 45px;
       transform: translate(0, 40px);
    }
-   height: 40vh;
+   height: auto;
    margin-left: 100px;
    width: 40vw;
    float: right;
    position: relative;
    display: block;
-   padding: 20px;
-   padding-right: 50px;
+   padding: 20px 50px 60px 20px;
    align-items: center;
    justify-content: center;
    font-size: 28px;

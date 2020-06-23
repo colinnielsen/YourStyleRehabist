@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import SplashImage from './Page2SplashImage';
 import StyledBackgroundSection from './BackgroundImageScreen2';
+import useWindowSize from '../hooks/useWidth';
 
 const Page2Container = styled.section`
    @media only screen and (max-width: 800px) {
@@ -9,9 +10,9 @@ const Page2Container = styled.section`
       flex-flow: column wrap;
       height: 95vh
    }
-   height: 110vh;
+   height: 105vh;
    width: 100vw;
-   transform: translate(-2px);
+   transform: translate(-20px);
    display: flex;
    background: rgba(181, 168, 152, 0.08);
    flex-flow: row nowrap;
@@ -152,32 +153,19 @@ const ExplainationText = styled.div`
 `;
 
 const Page2 = () => {
-   const [width, setWidth] = useState();
-   const isClient = typeof window === 'object';
-
-   const handleResize = () => {console.log(window.innerWidth); setWidth(window.innerWidth);}
-
-   useEffect(() => {
-      if (!isClient) {
-         return false;
-      }
-      handleResize();
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
-   },[]);
-
+   const size = useWindowSize();
    const Container = () => 
       <Page2Container>
          <ContentContainer>
-            {width > 800 ?
-               <ImageContainer>
+            {size.width > 800
+               ? <ImageContainer>
                   <SplashBox>
                      What I do for you -
                   </SplashBox>
                   <Gradient />
                   <SplashImage />
-               </ImageContainer> :
-               <MobileSplashBox>
+               </ImageContainer>
+               : <MobileSplashBox>
                   What I do for you -
                </MobileSplashBox>
             }
@@ -195,9 +183,8 @@ const Page2 = () => {
 
    return (
       <>
-         {width < 800
+         {size.width < 800
             ? <StyledBackgroundSection>
-               {console.log('less than 800')}
                   <Container />
                </StyledBackgroundSection>
             : <Container />

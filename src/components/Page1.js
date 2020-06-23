@@ -6,10 +6,11 @@ import _ProfilePic from './ProfilePic';
 const Page1Container = styled.div`
    @media only screen and (max-width: 800px) {
       flex-direction: column;
+      height: 100%;
    }
    height: 100vh;
-   max-height: 100vh;
-   overflow: hidden;
+   // max-height: 100vh;
+   // overflow: hidden;
    width: 100vw;
    display: flex;
    align-items: center;
@@ -29,7 +30,7 @@ const ProfileContainer = styled.div`
    @media all and (max-width: 500px) {
       width: 200px;
       height: 200px;
-      transform: translate(-7px,-7px);
+      transform: translate(-7px,13px);
    }
    width: 400px;
    height: 400px;
@@ -38,7 +39,7 @@ const ProfileContainer = styled.div`
 
 const LandingInfo = styled.div`
    @media only screen and (max-width: 800px) {
-      margin: 0;
+      margin: 0px !important;
       height: auto;
       width: auto;
    }
@@ -53,6 +54,8 @@ const LandingInfo = styled.div`
 const Name = styled.div`
    @media only screen and (max-width: 800px) {
       display: none;
+      visibility: hidden;
+      font-size: 0px;
    }
    @media only screen and (max-width: 1200px) {
       font-size: 48px;
@@ -78,7 +81,7 @@ const SplashBox = styled.div`
       padding: 20px;
       margin: 0;
       float: none;
-      line-height: 45px;
+      line-height: 35px;
       transform: translate(0, 40px);
    }
    height: auto;
@@ -110,10 +113,10 @@ const Subheader = styled.div`
 
 const P = styled.div`
    @media only screen and (max-width: 800px) {
-      font-size: 18px;
+      font-size: 1rem;
       line-height: 24px;
    }
-   font-family: Inria;
+   font-family: Inria_italic;
    margin-top: 10px;
    margin-bottom: 30px;
    font-size: 22px;

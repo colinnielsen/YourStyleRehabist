@@ -201,7 +201,9 @@ const Page5 = () => {
                <FinalQuote>
                   Click here for packages and pricing.
                </FinalQuote>
-               <PricingButton>
+               <PricingButton
+                  onClick={() => window.location.pathname = 'packages-and-pricing'}
+               >
                   Pricing
                </PricingButton>
             </Text>

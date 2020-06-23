@@ -8,7 +8,8 @@ const Page2Container = styled.section`
    @media only screen and (max-width: 800px) {
       transform: none;
       flex-flow: column wrap;
-      height: 95vh
+      height: auto;
+      overflow: auto;
    }
    height: 105vh;
    width: 100vw;
@@ -20,16 +21,16 @@ const Page2Container = styled.section`
 `;
 
 const ContentContainer = styled.div`
+   @media only screen and (max-width: 800px) {
+      transform: none;
+      flex-flow: column wrap;
+      height: auto;
+      position: inherit;
+   }
    position: absolute;
    width: 100%;
    height: 90%;
    display: flex;
-   @media only screen and (max-width: 800px) {
-      transform: none;
-      flex-flow: column wrap;
-      height: 105vh;
-      position: inherit;
-   }
    align-items: center;
    justify-content: center;
 `;
@@ -100,10 +101,10 @@ const SplashColorBox = styled.div`
    @media only screen and (max-width: 800px) {
       transform: none;
       width: 85%;
-      position: absolute;
+      position: inherit;
       padding: 15px;
-      height: 405px;
-      margin-top: 5px;
+      height: auto;
+      margin: 20vh 0 20vh 0;
    }
    background: #C5B9AD;
    z-index: 2;
@@ -120,7 +121,7 @@ const SplashTextBox = styled.div`
    }
    font-family: Inria;
    font-size: 34px;
-   line-height: 34px;
+   line-height: 2.2rem;
    letter-spacing: -0.05em;
    color: #F9F9F9;
    width: 320px;
@@ -131,7 +132,7 @@ const Line = styled.div`
       margin: .2rem;
    }
    height: 3px;
-   width: 90%;
+   width: 75%;
    border: 2px solid #575757;
    margin-top: 8px;
 `;
@@ -144,10 +145,10 @@ const ExplainationText = styled.div`
       margin-top: 20px;
    }
    margin-top: 25px;
-   font-family: Inria;
-   font-size: 24px;
-   padding: 10px;
-   line-height: 32px;
+   font-family: Inria_italic;
+   font-size: 1.3rem;
+   padding: .5rem 2rem 2rem 1.5rem;
+   line-height: 2rem;
    letter-spacing: -0.05em;
    color: #F9F9F9;
 `;
@@ -159,7 +160,7 @@ const Page2 = () => {
    const Container = () => 
       <Page2Container>
          <ContentContainer>
-            {size.width < 800
+            {size.width > 800
                ? <ImageContainer>
                   <SplashBox>
                      What I do for you -

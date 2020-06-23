@@ -65,7 +65,7 @@ const Gradient = styled.div`
 const SplashText = styled.div`
    @media only screen and (max-width: 800px) {
       transform: none;
-      margin-top: -16vh;
+      margin-top: -8vh;
       font-size: 28px;
       width: 80vw;
       margin-left: 50%;

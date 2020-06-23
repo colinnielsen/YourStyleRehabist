@@ -198,6 +198,7 @@ const SecondSplashText = styled(SplashText)`
    @media only screen and (max-width: 800px) {
       position: inherit;
       font-size: 34px;
+      line-height: 2rem;
       width: 100vw;
       left: 0;
    }

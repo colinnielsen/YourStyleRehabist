@@ -60,11 +60,11 @@ a:hover {
 }
 a:link {
   text-decoration: none;
-  color: #4d80f0;
+  color: #F2F2F2;
 }
 a:visited {
   text-decoration: none;
-  color: #4d80f0;
+  color: #F2F2F2;
 }
 abbr[title] {
   border-bottom: none;
@@ -483,4 +483,9 @@ li > p {
 @font-face {
   font-family: "Inria";
   src: url("../fonts/InriaSerif-Regular.ttf");
+}
+
+@font-face {
+  font-family: "PT Script";
+  src: url("../fonts/PTSZ.ttf");
 }

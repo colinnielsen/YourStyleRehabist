@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Page5SpashImage from './Page5SplashImage';
-import MessengerIcon from './MessengerIcon';
-import EmailIcon from './EmailIcon';
-import useWidth from '../hooks/useWidth';
 import useWindowSize from '../hooks/useWidth';
+import { ContactMe, Button } from './ContactSection';
 
 const Page5Container = styled.section`
    @media only screen and (max-width: 800px) {
@@ -141,43 +139,6 @@ const ContactContainer = styled.div`
    height: 220px;
 `;
 
-const Button = styled.div`
-   @media only screen and (max-width: 800px) {
-      width: auto;
-      font-size: 1rem;
-      height: 55px;
-   }
-   box-shadow: 0px 1px 2px rgba(46,41,51,0.08), 0px 2px 4px rgba(71,63,79,0.08);
-   width: 200px;
-   height: 70px;
-   display: flex;
-   margin: 10px;
-   align-items: center;
-   justify-content: space-around;
-   font-weight: bold;
-   color: #fff;
-   text-align: center;
-   padding: 12px 16px;
-   font-size: 1rem;
-   background-color: #FFFFFF;
-   border-radius: 5px; 
-   cursor: pointer;
-   outline: none;
-`;
-
-const MessageButton = styled(Button)`
-   color: #377df6;
-`;
-
-const Link = styled.a`
-   margin-left: 15px;
-`;
-
-const EmailButton = styled(Button)`
-   background-color: #cccccc;
-   color: black;
-`;
-
 const PricingButton = styled(Button)`
    width: 250px !important;
    color: #462631;
@@ -213,26 +174,11 @@ const Page5 = () => {
             </>}
          </ImageContainer>
          <ContactContainer>
-            <MessageButton
-               onClick={() => window.location.href = 'http://m.me/monika.nielsen.14'}
-            >
-               <MessengerIcon />
-               <Link>
-                  Messenger
-               </Link>
-            </MessageButton>
-            <EmailButton
-               onClick={() => window.location.href = 'mailto:monikamnielsen@gmail.com'}
-            >
-               <EmailIcon />
-               <Link>
-                  Email
-               </Link>
-            </EmailButton>
+            <ContactMe />
          </ContactContainer>
       </Page5Container>
    );
 }
-   
+
 
 export default Page5;

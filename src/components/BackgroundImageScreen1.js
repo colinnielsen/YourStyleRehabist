@@ -37,7 +37,6 @@ const BackgroundSection = ({ className, children }) => (
 
 const StyledBackgroundSection = styled(BackgroundSection)`
    width: 100%;
-   padding: 10vh 0 10vh 0;
    &::before,
    &::after {
       filter: blur(3px);

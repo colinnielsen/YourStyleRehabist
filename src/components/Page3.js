@@ -203,7 +203,8 @@ const SecondSplashText = styled(SplashText)`
       left: 0;
    }
    z-index: 5;
-   font-size: 48px;
+   font-family: PT Script;
+   font-size: 3.5rem;
    background: #462631;
    margin-top: 162vh;
    left: 2vw;

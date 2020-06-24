@@ -6,11 +6,9 @@ import _ProfilePic from './ProfilePic';
 const Page1Container = styled.div`
    @media only screen and (max-width: 800px) {
       flex-direction: column;
-      height: 100%;
+      height: 100vh;
    }
    height: 100vh;
-   // max-height: 100vh;
-   // overflow: hidden;
    width: 100vw;
    display: flex;
    align-items: center;
@@ -46,9 +44,16 @@ const LandingInfo = styled.div`
    display: block;
    justify-content: center;
    align-items: space-around;
-   margin: 8%;
+   margin: 8% 8% 8% 10%;
    width: 40%;
    height: auto;
+`;
+
+const Stylish = styled.text`
+   font-family: PT Script; 
+   font-size: 3rem;
+   line-height: 50px;
+   color: #111;
 `;
 
 const Name = styled.div`
@@ -142,8 +147,10 @@ const Page1 = () =>
             <LandingInfo>
                <Name>Your Style Rehabist</Name>
                <SplashBox>
-                  I'm Monika Nielsen -
-                     Your Style Rehabist. 
+                  <Stylish>
+                     I'm Monika Nielsen - <br />
+                        Your Style Rehabist. 
+                  </Stylish>
                   <br />
                   <Subheader>
                   </Subheader>

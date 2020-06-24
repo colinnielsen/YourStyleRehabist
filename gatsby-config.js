@@ -3,9 +3,10 @@ module.exports = {
     title: `Your Style Rehabist`,
     description: `Rehab your closet with stylist Monika Nielsen`,
     author: `Colin Nielsen`,
-    siteUrl: `https://gatsby-starter-landing-page.netlify.com`,
+    siteUrl: `https://www.yourstylerehabist.com/`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

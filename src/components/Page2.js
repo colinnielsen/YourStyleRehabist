@@ -94,7 +94,6 @@ const SplashBox = styled.div`
 
 const MobileSplashBox = styled(SplashBox)`
    top: 0;
-
 `;
 
 const SplashColorBox = styled.div`

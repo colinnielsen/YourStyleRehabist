@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Page5SpashImage from './Page5SplashImage';
 import useWindowSize from '../hooks/useWidth';
 import { ContactMe, Button } from './ContactSection';
+import { Link } from 'gatsby';
 
 const Page5Container = styled.section`
    @media only screen and (max-width: 800px) {
@@ -162,11 +163,11 @@ const Page5 = () => {
                <FinalQuote>
                   Click here for packages and pricing.
                </FinalQuote>
-               <PricingButton
-                  onClick={() => window.location.pathname = 'packages-and-pricing'}
-               >
-                  Pricing
-               </PricingButton>
+               <Link to={`/packages-and-pricing/`}>
+                  <PricingButton>
+                     Pricing
+                  </PricingButton>
+               </Link>
             </Text>
             {size.width > 800 && <>
                <Gradient />

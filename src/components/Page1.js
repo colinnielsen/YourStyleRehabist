@@ -6,9 +6,8 @@ import _ProfilePic from './ProfilePic';
 const Page1Container = styled.div`
    @media only screen and (max-width: 800px) {
       flex-direction: column;
-      height: 100vh;
+
    }
-   height: 100vh;
    width: 100vw;
    display: flex;
    align-items: center;

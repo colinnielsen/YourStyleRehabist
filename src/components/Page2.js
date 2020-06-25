@@ -16,8 +16,6 @@ const Page2Container = styled.section`
    transform: translate(-20px);
    display: flex;
    background: rgba(181, 168, 152, 0.08);
-   flex-flow: row nowrap;
-   overflow: hidden;
 `;
 
 const ContentContainer = styled.div`
@@ -29,7 +27,7 @@ const ContentContainer = styled.div`
    }
    position: absolute;
    width: 100%;
-   height: 90%;
+   height: 100%;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -108,7 +106,7 @@ const SplashColorBox = styled.div`
    background: #C5B9AD;
    z-index: 2;
    width: 500px;
-   transform: translate(-10%, 20%);
+   transform: translate(-10vw, 10vw);
    height: 650px;
    padding: 50px;
 `;
@@ -174,7 +172,7 @@ const Page2 = () => {
             <SplashColorBox>
                <SplashTextBox>
                   “You should be<br /> able to get ready<br /> in 10 minutes...”
-               <Line />
+                  <Line />
                </SplashTextBox>
                <ExplainationText>
                   ...feeling amazing with clothing that you know fits you well and you look good in. Walking out the door feeling confident and fierce, ready to walk into any room- command that meeting, show up at the party, close the deal, make the new friend.

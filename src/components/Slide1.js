@@ -6,7 +6,6 @@ import _ProfilePic from './ProfilePic';
 const Container = styled.div`
    @media only screen and (max-width: 800px) {
       flex-direction: column;
-
    }
    width: 100vw;
    display: flex;
@@ -37,7 +36,6 @@ const ProfileContainer = styled.div`
 const LandingInfo = styled.div`
    @media only screen and (max-width: 800px) {
       margin: 0px !important;
-      height: auto;
       width: auto;
    }
    display: block;
@@ -45,7 +43,6 @@ const LandingInfo = styled.div`
    align-items: space-around;
    margin: 8% 8% 8% 10%;
    width: 40%;
-   height: auto;
 `;
 
 const Stylish = styled.text`
@@ -81,14 +78,12 @@ const SplashBox = styled.div`
       font-size: 2rem;
       text-align: center;
       padding: 0;
-      height: auto;
       padding: 20px;
       margin: 0;
       float: none;
       line-height: 35px;
       transform: translate(0, 40px);
    }
-   height: auto;
    margin-left: 100px;
    width: 40vw;
    float: right;

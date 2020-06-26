@@ -36,6 +36,9 @@ const BackgroundSection = ({ className, children }) => (
 );
 
 const StyledBackgroundSection = styled(BackgroundSection)`
+   @media only screen and (max-width: 800px) {
+      padding: 15vw 0 30vw 0;
+   }
    width: 100%;
    &::before,
    &::after {

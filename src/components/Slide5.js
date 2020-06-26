@@ -57,9 +57,9 @@ const SplashText = styled.div`
    }
    color: #FFF;
    margin-left: 20px;
-   margin-top: 80px;
+   margin-top: 1rem;
    font-family: Inria_italic;
-   font-size: 58px;
+   font-size: 3rem;
 `;
 
 const DescriptorText = styled.div`
@@ -84,9 +84,9 @@ const Text = styled.div`
       height: auto;
       padding: 6vw 0 6vw 0;
    }
-   padding: 30px;
-   height: auto;
-   // position: absolute;
+   padding: 1rem;
+   height: 700px;
+   position: absolute;
    z-index: 2;
 `;
 
@@ -112,7 +112,7 @@ const FinalQuote = styled.div`
    }
    font-family: Inria_italic;
    color: #FFF;
-   font-size: 30px;
+   font-size: 2rem;
    padding: 30px;
    text-align: center;
 `;
@@ -157,7 +157,7 @@ const Slide5 = () => {
                <SplashText>Imagine...</SplashText>
                <DescriptorText>
                   getting ready quickly, feeling like you have lots of choices, feeling fiercely confident what's clothing that you know fits and you look good in.
-                  <br />Now imagine being able to give to others and make a huge difference.<br /><br /> It is the ultimate and Do Good-Look Good!
+                  <br />Now imagine being able to give to others and make a huge difference.<br /> It is the ultimate and Do Good-Look Good!
                </DescriptorText>
                <Line />
                <FinalQuote>

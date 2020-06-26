@@ -150,23 +150,21 @@ const Text = styled.div`
 
 const Slide2 = () => {
    const size = useWindowSize();
-   console.log(size.width);
-   
-   const Container = () => 
+
+   const Container = () =>
       <Slide2Container>
          <ContentContainer>
-            {size.width > 800
-               ? <ImageContainer>
+            {size.width < 800
+               ? <MobileSplashBox>
+                  What I do for you -
+               </MobileSplashBox>
+               : <ImageContainer>
                   <SplashBox>
                      What I do for you -
                   </SplashBox>
                   <Gradient />
                   <SplashImage />
-               </ImageContainer>
-               : <MobileSplashBox>
-                  What I do for you -
-               </MobileSplashBox>
-            }
+               </ImageContainer>}
             <SplashTextBox>
                <Header>
                   “You should be<br /> able to get ready<br /> in 10 minutes...”
@@ -183,8 +181,8 @@ const Slide2 = () => {
       <>
          {size.width < 800
             ? <StyledBackgroundSection>
-                  <Container />
-               </StyledBackgroundSection>
+               <Container />
+            </StyledBackgroundSection>
             : <Container />
          }
       </>

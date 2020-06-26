@@ -1,19 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-import SplashImage from './Page2SplashImage';
-import StyledBackgroundSection from './BackgroundImageScreen2';
+import SplashImage from './Slide2SplashImage';
+import StyledBackgroundSection from './BackgroundImageSlide2';
 import useWindowSize from '../hooks/useWidth';
 
-const Page2Container = styled.section`
+const Slide2Container = styled.section`
    @media only screen and (max-width: 800px) {
       transform: none;
       flex-flow: column wrap;
       height: auto;
-      overflow: auto;
    }
-   height: 105vh;
+   min-height: 105vh;
+   padding: 10vh 0 10vh 0;
    width: 100vw;
-   transform: translate(-20px);
    display: flex;
    background: rgba(181, 168, 152, 0.08);
 `;
@@ -27,7 +26,6 @@ const ContentContainer = styled.div`
    }
    position: absolute;
    width: 100%;
-   height: 100%;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -71,7 +69,7 @@ const SplashBox = styled.div`
       left: -10px;
       margin-top: 3vh;
    }
-   position: absolute;  
+   position: absolute;
    margin: 40px;
    margin-left: 8vw;
    z-index: 4;
@@ -94,7 +92,7 @@ const MobileSplashBox = styled(SplashBox)`
    top: 0;
 `;
 
-const SplashColorBox = styled.div`
+const SplashTextBox = styled.div`
    @media only screen and (max-width: 800px) {
       transform: none;
       width: 85%;
@@ -111,7 +109,7 @@ const SplashColorBox = styled.div`
    padding: 50px;
 `;
 
-const SplashTextBox = styled.div`
+const Header = styled.div`
    @media only screen and (max-width: 800px) {
       font-size: 1.8rem;
       line-height: 35px;
@@ -134,7 +132,7 @@ const Line = styled.div`
    margin-top: 8px;
 `;
 
-const ExplainationText = styled.div`
+const Text = styled.div`
    @media only screen and (max-width: 800px) {
       margin: 0;
       font-size: 1.2rem;
@@ -150,12 +148,12 @@ const ExplainationText = styled.div`
    color: #F9F9F9;
 `;
 
-const Page2 = () => {
+const Slide2 = () => {
    const size = useWindowSize();
    console.log(size.width);
    
    const Container = () => 
-      <Page2Container>
+      <Slide2Container>
          <ContentContainer>
             {size.width > 800
                ? <ImageContainer>
@@ -169,17 +167,17 @@ const Page2 = () => {
                   What I do for you -
                </MobileSplashBox>
             }
-            <SplashColorBox>
-               <SplashTextBox>
+            <SplashTextBox>
+               <Header>
                   “You should be<br /> able to get ready<br /> in 10 minutes...”
                   <Line />
-               </SplashTextBox>
-               <ExplainationText>
+               </Header>
+               <Text>
                   ...feeling amazing with clothing that you know fits you well and you look good in. Walking out the door feeling confident and fierce, ready to walk into any room- command that meeting, show up at the party, close the deal, make the new friend.
-               </ExplainationText>
-            </SplashColorBox>
+               </Text>
+            </SplashTextBox>
          </ContentContainer>
-      </Page2Container>;
+      </Slide2Container>;
 
    return (
       <>
@@ -193,4 +191,4 @@ const Page2 = () => {
    );
 }
 
-export default Page2;
+export default Slide2;

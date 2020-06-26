@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Page4SpashImage from './Page4SplashImage';
+import SpashImage from './Slide4SplashImage';
 
-const Page4Container = styled.section`
+const Container = styled.section`
    @media only screen and (max-width: 800px) {
       flex-flow: column nowrap;
       padding: 0;
@@ -115,9 +115,9 @@ const Row = styled.div`
    flex-flow: row nowrap;
 `;
 
-const Page4 = () =>
+const Slide4 = () =>
    <>
-      <Page4Container>
+      <Container>
          <Row>
             <FirstReviewContainer>
                “I had the pleasure of working with Monika as a personal stylist. We met at the mall to shop for a dress to wear to a wedding I was attending last Fall. She was incredible!
@@ -130,7 +130,7 @@ const Page4 = () =>
                What people<br />are saying...
             </SplashText>
             <Gradient />
-            <Page4SpashImage />
+            <SpashImage />
          </ImageAndText>
          </Row>
          <Row>
@@ -144,7 +144,7 @@ const Page4 = () =>
                <QuoteEnd>by Julie - Arlington</QuoteEnd>
             </ReviewContainer>
          </Row>
-      </Page4Container>
+      </Container>
    </>;
 
-export default Page4;
+export default Slide4;

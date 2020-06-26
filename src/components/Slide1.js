@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import StyledBackgroundSection from './BackgroundImageScreen1';
+import StyledBackgroundSection from './BackgroundImageSlide1';
 import _ProfilePic from './ProfilePic';
 
-const Page1Container = styled.div`
+const Container = styled.div`
    @media only screen and (max-width: 800px) {
       flex-direction: column;
 
@@ -136,10 +136,10 @@ const Line = styled.div`
    transform: translate(-50%);
 `;
 
-const Page1 = () =>
+const Slide1 = () =>
    <>
       <StyledBackgroundSection>
-         <Page1Container>
+         <Container>
             <ProfileContainer>
                <ProfilePic />
             </ProfileContainer>
@@ -162,8 +162,8 @@ const Page1 = () =>
                   <Line />
                </SplashBox>
             </LandingInfo>
-         </Page1Container>
+         </Container>
       </StyledBackgroundSection>
    </>;
 
-export default Page1;
+export default Slide1;

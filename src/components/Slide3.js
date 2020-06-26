@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import Page3SpashImage from './Page3SplashImage';
+import SpashImage from './Slide3SplashImage';
 import DivClip from './divClip.js';
 
-const Page3Container = styled.section`
+const Slide3Container = styled.section`
    @media only screen and (max-width: 800px) {
       height: auto;
       overflow; auto;
       flex-direction: column;
       align-items: center;
    }
-   height: 250vh;
+   min-height: 250vh;
    width: 100vw;
    display: flex;
    background: linear-gradient(125.65deg, #462631 1.27%, #DBD1C7 112.48%);
@@ -230,7 +230,7 @@ const SecondDisplay = styled.div`
    font-family: Inria;
    font-size: 18px;
    margin-top: 180vh;
-   height: 580px;
+   height: auto;
    width: 750px;
    background: #C5B9AD;
    right: 10%;
@@ -276,10 +276,10 @@ const ProgressionBar = () =>
    </ProgressionBarContainer>;
 
 
-const Page2 = () =>
+const Slide3 = () =>
    <>
       <DivClip />
-      <Page3Container>
+      <Slide3Container>
          <SplashText>
             How can I help?
          </SplashText>
@@ -305,7 +305,7 @@ const Page2 = () =>
          <ProgressionBar />
          <ImageContainer>
             <Gradient />
-            <Page3SpashImage />
+            <SpashImage />
          </ImageContainer>
          <SecondSplashText>
             ...most importantly
@@ -318,7 +318,7 @@ const Page2 = () =>
             A big part of my business is making sure that the things you no longer need go to local charities. Giving to someone in need is a life-changing experience! Dress for Success, the Assistance League of Denver, the Gathering Place, all amazing organizations that have boots on the ground and change people's lives.
             <Line />
          </SecondDisplay>
-      </Page3Container>
+      </Slide3Container>
    </>;
 
-export default Page2;
+export default Slide3;

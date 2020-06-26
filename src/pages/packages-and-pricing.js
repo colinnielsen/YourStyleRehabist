@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/default.css';
-import StyledBackgroundSection from '../components/BackgroundImageScreen2';
+import StyledBackgroundSection from '../components/BackgroundImageSlide2';
 import styled from 'styled-components';
 import { ContactMe } from '../components/ContactSection';
 import Squiggle from '../components/Squiggle';

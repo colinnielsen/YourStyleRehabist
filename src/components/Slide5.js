@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Page5SpashImage from './Page5SplashImage';
+import SplashImage from './Slide5SplashImage';
 import useWindowSize from '../hooks/useWidth';
 import { ContactMe, Button } from './ContactSection';
 import { Link } from 'gatsby';
 
-const Page5Container = styled.section`
+const Container = styled.section`
    @media only screen and (max-width: 800px) {
       flex-flow: column nowrap;
       padding: 0;
@@ -85,8 +85,8 @@ const Text = styled.div`
       padding: 6vw 0 6vw 0;
    }
    padding: 30px;
-   height: 700px;
-   position: absolute;
+   height: auto;
+   // position: absolute;
    z-index: 2;
 `;
 
@@ -148,10 +148,10 @@ const PricingButton = styled(Button)`
    transform: translate(-50%);
 `;
 
-const Page5 = () => {
+const Slide5 = () => {
    const size = useWindowSize();
    return (
-      <Page5Container>
+      <Container>
          <ImageContainer>
             <Text>
                <SplashText>Imagine...</SplashText>
@@ -171,15 +171,14 @@ const Page5 = () => {
             </Text>
             {size.width > 800 && <>
                <Gradient />
-               <Page5SpashImage />
+               <SplashImage />
             </>}
          </ImageContainer>
          <ContactContainer>
             <ContactMe />
          </ContactContainer>
-      </Page5Container>
+      </Container>
    );
 }
 
-
-export default Page5;
+export default Slide5;

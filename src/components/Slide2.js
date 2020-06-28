@@ -9,6 +9,8 @@ const Container = styled.section`
       transform: none;
       flex-flow: column wrap;
       height: auto;
+      min-height: fit-content;
+      padding: 0 0 0 0;
    }
    min-height: 105vh;
    padding: 10vh 0 10vh 0;
@@ -68,6 +70,7 @@ const SplashBox = styled.div`
       margin: 20px;
       left: -10px;
       margin-top: 3vh;
+      position: relative;
    }
    position: absolute;
    margin: 40px;
@@ -88,10 +91,6 @@ const SplashBox = styled.div`
    letter-spacing: -0.02em;
 `;
 
-const MobileSplashBox = styled(SplashBox)`
-   top: 0;
-`;
-
 const SplashTextBox = styled.div`
    @media only screen and (max-width: 800px) {
       transform: none;
@@ -99,7 +98,7 @@ const SplashTextBox = styled.div`
       position: inherit;
       padding: 15px;
       height: auto;
-      margin: 20vh 0 20vh 0;
+      margin: 0 0 10vh 0;
    }
    background: #C5B9AD;
    z-index: 2;
@@ -155,9 +154,9 @@ const Slide2 = () => {
       <StyledBackgroundSection>
          <Container>
             <ContentContainer>
-               <MobileSplashBox>
+               <SplashBox>
                   What I do for you -
-               </MobileSplashBox>
+               </SplashBox>
                <SplashTextBox>
                   <Header>
                      “You should be<br /> able to get ready<br /> in 10 minutes...”

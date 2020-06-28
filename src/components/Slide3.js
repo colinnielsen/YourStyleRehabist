@@ -9,6 +9,8 @@ const Slide3Container = styled.section`
       overflow; auto;
       flex-direction: column;
       align-items: center;
+      min-height: fit-content;
+      padding: 0 0 10vh 0;
    }
    min-height: 250vh;
    width: 100vw;

@@ -9,8 +9,8 @@ const Container = styled.section`
       transform: none;
       flex-flow: column wrap;
       height: auto;
-      min-height: fit-content;
-      padding: 0 0 0 0;
+      min-height: 60vh;
+      padding: 0 0 10vh 0;
    }
    min-height: 105vh;
    padding: 10vh 0 10vh 0;
@@ -62,15 +62,16 @@ const Gradient = styled.div`
 
 const SplashBox = styled.div`
    @media only screen and (max-width: 800px) {
-      width: 325px;
+      width: 100%;
       height: 80px;
       font-style: normal;
       font-size: 36px;
       line-height: 30px;
-      margin: 20px;
+      margin: 0 0 40px 0;
       left: -10px;
       margin-top: 3vh;
       position: relative;
+      left: 0;
    }
    position: absolute;
    margin: 40px;

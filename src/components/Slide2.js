@@ -4,7 +4,7 @@ import SplashImage from './Slide2SplashImage';
 import StyledBackgroundSection from './BackgroundImageSlide2';
 import useWindowSize from '../hooks/useWidth';
 
-const Slide2Container = styled.section`
+const Container = styled.section`
    @media only screen and (max-width: 800px) {
       transform: none;
       flex-flow: column wrap;
@@ -151,20 +151,36 @@ const Text = styled.div`
 const Slide2 = () => {
    const size = useWindowSize();
 
-   const Container = () =>
-      <Slide2Container>
-         <ContentContainer>
-            {size.width < 800
-               ? <MobileSplashBox>
+   const Slide2Mobile = () =>
+      <StyledBackgroundSection>
+         <Container>
+            <ContentContainer>
+               <MobileSplashBox>
                   What I do for you -
                </MobileSplashBox>
-               : <ImageContainer>
-                  <SplashBox>
-                     What I do for you -
+               <SplashTextBox>
+                  <Header>
+                     “You should be<br /> able to get ready<br /> in 10 minutes...”
+                  <Line />
+                  </Header>
+                  <Text>
+                     ...feeling amazing with clothing that you know fits you well and you look good in. Walking out the door feeling confident and fierce, ready to walk into any room- command that meeting, show up at the party, close the deal, make the new friend.
+               </Text>
+               </SplashTextBox>
+            </ContentContainer>
+         </Container>
+      </StyledBackgroundSection>;
+
+   const Slide2Desktop = () =>
+      <Container>
+         <ContentContainer>
+            <ImageContainer>
+               <SplashBox>
+                  What I do for you -
                   </SplashBox>
-                  <Gradient />
-                  <SplashImage />
-               </ImageContainer>}
+               <Gradient />
+               <SplashImage />
+            </ImageContainer>
             <SplashTextBox>
                <Header>
                   “You should be<br /> able to get ready<br /> in 10 minutes...”
@@ -175,15 +191,13 @@ const Slide2 = () => {
                </Text>
             </SplashTextBox>
          </ContentContainer>
-      </Slide2Container>;
+      </Container>;
 
    return (
       <>
          {size.width < 800
-            ? <StyledBackgroundSection>
-               <Container />
-            </StyledBackgroundSection>
-            : <Container />
+            ? <Slide2Mobile />
+            : <Slide2Desktop />
          }
       </>
    );

@@ -51,7 +51,7 @@ export const ContactMe = () => <>
       </Link>
    </MessageButton>
    <EmailButton
-      onClick={() => window.location.href = 'mailto:monikamnielsen@gmail.com'}
+      onClick={() => window.location.href = 'mailto:monika@yourstylerehabist.com'}
    >
       <EmailIcon />
       <Link>

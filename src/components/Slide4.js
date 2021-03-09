@@ -94,10 +94,12 @@ const ImageAndText = styled.div`
       right: 0;
       left: 0;
       width: auto;
+      position: absolute;
    }
-   width: 32vw;
-   position: absolute;
-   right: 15vw;
+   width: 600px;
+   height: fit-content;
+   position: relative;
+   margin: 30px 0 0 30px;
 `;
 
 const QuoteEnd = styled.div`
@@ -120,28 +122,31 @@ const Slide4 = () =>
       <Container>
          <Row>
             <FirstReviewContainer>
-               “I had the pleasure of working with Monika as a personal stylist. We met at the mall to shop for a dress to wear to a wedding I was attending last Fall. She was incredible!
-               <br />She picked out the cutest dresses for me to try on some that I would have NEVER picked myself, but I did it anyway. We found the perfect dress for the occasion! It was one of the best shopping experiences ever. We had so much fun - laughing, chatting, and she taught me about how to fit to my body! Monika is the best! ♥️”
-               <QuoteEnd>by Carrie - Castle Rock</QuoteEnd>
+               "Monika Nielsen is my style rehabist! I was feeling overwhelmed and hating everything in my sea of closet clutter. She brought me a coffee and sat me on my bed while she pulled things out of my closet.
+               She wasn't pushy or insistent that I get rid of any of my cherished items just encouraged me to make good decisions on the pieces I loved. The best part is she donates my old pieces to great causes like Dress for Success so I know that I am helping women in need with clothes that were just sitting in my closets!
+               Do yourselves a favor ladies give her a call just to chat and find out how she can help you from being a 'closet-stander' like I was!"
+               <QuoteEnd>Janet - Littleton, CO</QuoteEnd>
             </FirstReviewContainer>
-            <PlaceholderReviewContainer />
-         <ImageAndText>
-            <SplashText>
-               What people<br />are saying...
+            {/* <PlaceholderReviewContainer /> */}
+            <ImageAndText>
+               <SplashText>
+                  What people<br />are saying...
             </SplashText>
-            <Gradient />
-            <SpashImage />
-         </ImageAndText>
+               <Gradient />
+               <SpashImage />
+            </ImageAndText>
          </Row>
          <Row>
             <ReviewContainer>
-               "Having trouble finding "the perfect jeans"? If you answered 'yes', then Monika's your gal! Speaking from first-hand experience, after trying on dozens of jeans for just the right hue, fit and finish... Monika saved the day - or in my case, the outfit. We shopped together, found the perfect fit and hue and then... she personally made them look weathered by hand. Personalized jeans for my Vegas outfit!
-               <QuoteEnd>by Deanna - Highlands Ranch</QuoteEnd>
+               "She helped me when I was on the fence about purging a blouse or jeans I hadn't worn in a year or two but, you know the age old question,
+               'what if I need it?' hahaha She was the voice of reason and so patient.  I LOVE my closet!
+               Its so organized and I know with 100% certainty that whatever I grab in the morning, it will fit and I will feel fabulous.
+               Monika has an incredible gift and her fashion eye is on point! You will not be disappointed in investing in her services!"
+               <QuoteEnd>Carrie - Castle Rock</QuoteEnd>
             </ReviewContainer>
             <ReviewContainer>
-               “Monika is wonderful to work with both as an organizer and personal shopper. Her keen eye for fashion and wide knowledge of style and what works for my body type makes shopping with her a breeze.
-               <br />I have worked with her to organize my closet and she makes an overwhelming job relatively easy and painless.
-               <QuoteEnd>by Julie - Arlington</QuoteEnd>
+               “Monika Nielsen is PHENOMENAL! I have worked with other stylists and organizers in the past and never felt the level of empowerment, confidence and pure happy as I have having worked with Monika."
+               <QuoteEnd>Alex - Denver, CO</QuoteEnd>
             </ReviewContainer>
          </Row>
       </Container>

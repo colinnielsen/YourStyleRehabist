@@ -158,7 +158,7 @@ const ThirdStep = styled(Step)`
       right: 2vw;
    }
    right: 10%;
-   margin-top: 120vh;
+   margin-top: 123vh;
 `;
 
 const ThirdStepLabel = styled(Label)`
@@ -202,6 +202,7 @@ const SecondSplashText = styled(SplashText)`
       font-size: 34px;
       line-height: 2rem;
       width: 100vw;
+      margin-top: 0;
       left: 0;
    }
    z-index: 5;
@@ -289,14 +290,16 @@ const Slide3 = () =>
             <FirstStepLabel>
                Cleanse and Edit
             </FirstStepLabel>
-            A 2-hour appointment, with the goal of pulling clothing from your closet that are in great condition but you are no longer wearing. Did you know that statistically we wear 23% of our wardrobe? Let me help! We'll create space in your closet so you can breathe. Pulling the things that don't work, making sure those get donated to local nonprofits, getting them into the right hands.
+            Did you know that statistically we wear 23% of our wardrobe? Let me help! <br />
+            A 2-hour appointment, with the goal of pulling clothing from your closet that are in great condition but you are no longer wearing.
+            We'll create space in your closet so you can breathe.
+            Pulling the things that don't work for you and making sure those get donated to local nonprofits, getting them into the hands of people who need them.
       </FirstStep>
          <SecondStep>
             <SecondStepLabel>
-               Are you a<br />‘closet-stander’?
-         </SecondStepLabel>
-         The person who stands there looking, but unsure what to put together? Let's shop from your closet! Putting together a wardrobe that you can easily Grab & Go. <br />
-         Adding additional pieces as necessary from local boutiques or your favorite online avenue.
+               Clarify and Capsulate Your Wardrobe
+            </SecondStepLabel>
+            Are you a closet stander? The person who stands there looking, but unsure what to put together? Let's shop from your closet! Strategically assessing your personality, your body and your lifestyle-Putting together a wardrobe that you can easily Grab & Go.Finding your needs and holes in your wardrobe so you can shop with intention.
       </SecondStep>
          <ThirdStep>
             <ThirdStepLabel>
@@ -314,10 +317,9 @@ const Slide3 = () =>
          </SecondSplashText>
          <SecondDisplay>
             <SecondDisplayH1>
-               I am a first generation purger
+            As a first generation purger...
             </SecondDisplayH1>
-            and I understand the emotional connection we get to our things. We wore them during a certain times of our life, we paid a lot of money  for them, we feel like we will get back in them or back to them soon. Your closet is personal, and a vulnerable space. I understand and can gently help walk you  through the process. < br />
-            A big part of my business is making sure that the things you no longer need go to local charities. Giving to someone in need is a life-changing experience! Dress for Success, the Assistance League of Denver, the Gathering Place, all amazing organizations that have boots on the ground and change people's lives.
+            I understand the emotional connection we have to our things. We wore them during a certain times of our life, we paid a lot of money for them, we feel like we will get back in them or back to them soon. Your closet is a personal and vulnerable space. We will walk through your space together with respect and thoughtfulness through the process.A big part of my business is making sure that the things you no longer need go to local charities. Giving to someone in need is a life-changing experience! Dress for Success, the Assistance League of Denver, the Gathering Place, all amazing organizations that have boots on the ground and change people's lives.
             <Line />
          </SecondDisplay>
       </Slide3Container>

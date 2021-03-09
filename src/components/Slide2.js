@@ -12,7 +12,7 @@ const Container = styled.section`
       min-height: 60vh;
       padding: 0 0 10vh 0;
    }
-   min-height: 105vh;
+   min-height: 90vh;
    padding: 10vh 0 10vh 0;
    width: 100vw;
    display: flex;
@@ -63,10 +63,8 @@ const Gradient = styled.div`
 const SplashBox = styled.div`
    @media only screen and (max-width: 800px) {
       width: 100%;
-      height: 80px;
       font-style: normal;
       font-size: 36px;
-      line-height: 30px;
       margin: 0 0 40px 0;
       left: -10px;
       margin-top: 3vh;
@@ -77,7 +75,6 @@ const SplashBox = styled.div`
    margin: 40px;
    margin-left: 8vw;
    z-index: 4;
-   height: 250px;
    width: 400px;
    background: #DBD1C7;
    color: #462631;
@@ -89,6 +86,7 @@ const SplashBox = styled.div`
    display: flex;
    align-items: center;
    justify-content: center;
+   flex-direction: column;
    letter-spacing: -0.02em;
 `;
 
@@ -157,6 +155,7 @@ const Slide2 = () => {
             <ContentContainer>
                <SplashBox>
                   What I do for you -
+                  <Text>I will walk you through the mental gymnastics of a Cleanse and Edit, help you Clarify your style and give you tools to Capsulate your wardrobe.</Text>
                </SplashBox>
                <SplashTextBox>
                   <Header>
@@ -177,7 +176,9 @@ const Slide2 = () => {
             <ImageContainer>
                <SplashBox>
                   What I do for you -
-                  </SplashBox>
+               <Text>I will walk you through the mental gymnastics of a Cleanse and Edit, help you Clarify your style and give you tools to Capsulate your wardrobe.</Text>
+               </SplashBox>
+
                <Gradient />
                <SplashImage />
             </ImageContainer>

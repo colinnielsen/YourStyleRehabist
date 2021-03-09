@@ -9,6 +9,7 @@ const Container = styled.div`
    }
    width: 100vw;
    display: flex;
+   min-height: 75vh;
    align-items: center;
    justify-content: center;
    flex-wrap: nowrap;
@@ -143,16 +144,13 @@ const Slide1 = () =>
                <SplashBox>
                   <Stylish>
                      I'm Monika Nielsen - <br />
-                        Your Style Rehabist. 
+                     Your Style Rehabist.
                   </Stylish>
                   <br />
                   <Subheader>
                   </Subheader>
-                  <P>I specialize in the 3 C's.
-                     <br />
-                     Cleansing and Clarifying your closet <br /> to create a Capsulated wardrobe.
-                     <br />
-                     I will take the chaos of your closet into calm in your life - so you're no longer standing and staring at the things you never wear.
+                  <P>
+                     Helping you take your chaos into calm by cleansing, clarifying and capsulating your closet and wardrobe.
                   </P>
                   <Line />
                </SplashBox>

@@ -127,7 +127,6 @@ const Slide4 = () =>
                Do yourselves a favor ladies give her a call just to chat and find out how she can help you from being a 'closet-stander' like I was!"
                <QuoteEnd>Janet - Littleton, CO</QuoteEnd>
             </FirstReviewContainer>
-            {/* <PlaceholderReviewContainer /> */}
             <ImageAndText>
                <SplashText>
                   What people<br />are saying...

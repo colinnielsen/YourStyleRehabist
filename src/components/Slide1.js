@@ -31,7 +31,7 @@ const ProfileContainer = styled.div`
    }
    width: 400px;
    height: 400px;
-   background: linear-gradient(108.75deg, #9A9086 14.18%, #AAA39C 206.1%, #FFFFFF 206.12%);
+   background: linear-gradient(108.75deg, #d1c6ba 14.18%, #AAA39C 206.1%, #FFFFFF 206.12%);
 `;
 
 const LandingInfo = styled.div`
@@ -86,6 +86,7 @@ const SplashBox = styled.div`
       transform: translate(0, 40px);
    }
    margin-left: 100px;
+   margin-top: 40px;
    width: 40vw;
    float: right;
    position: relative;
@@ -142,16 +143,11 @@ const Slide1 = () =>
             <LandingInfo>
                <Name>Your Style Rehabist</Name>
                <SplashBox>
-                  <Stylish>
-                     I'm Monika Nielsen - <br />
-                     Your Style Rehabist.
-                  </Stylish>
+                  <Stylish>I'm Monika Nielsen - <br /> Your Style Rehabist.</Stylish>
                   <br />
                   <Subheader>
                   </Subheader>
-                  <P>
-                     Helping you take your chaos into calm by cleansing, clarifying and capsulating your closet and wardrobe.
-                  </P>
+                  <P>Helping you take your chaos into calm by cleansing, clarifying and capsulating your closet and wardrobe.</P>
                   <Line />
                </SplashBox>
             </LandingInfo>

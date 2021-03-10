@@ -42,7 +42,7 @@ const StyledBackgroundSection = styled(BackgroundSection)`
    width: 100%;
    &::before,
    &::after {
-      filter: blur(3px);
+      filter: blur(10px);
       background-position: bottom center;
       background-repeat: repeat-y;
       background-size: cover;

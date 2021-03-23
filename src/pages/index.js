@@ -27,13 +27,13 @@ export default () => {
       window.fd('form', {
         formId: '60510560568cfe0ea1997cad'
       });
+      Calendly.initBadgeWidget({ url: 'https://calendly.com/monikanielsen/20-minute-consult-call?hide_gdpr_banner=1', text: 'Connect for Consult Call', color: '#e9cec5', textColor: '#ffffff', branding: true })   
  },[])
  return <>
     <Helmet>
       <link rel="icon" href={favicon} />
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/monikanielsen/20-minute-consult-call?hide_gdpr_banner=1', text: 'Connect for Consult Call', color: '#e9cec5', textColor: '#ffffff', branding: true }) }</script>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
     </Helmet>
     <SEO />
     <Slide1 />

@@ -27,7 +27,7 @@ export default () => {
       window.fd('form', {
         formId: '60510560568cfe0ea1997cad'
       });
-      Calendly.initBadgeWidget({ url: 'https://calendly.com/monikanielsen/20-minute-consult-call?hide_gdpr_banner=1', text: 'Connect for Consult Call', color: '#e9cec5', textColor: '#ffffff', branding: true })   
+      // Calendly.initBadgeWidget({ url: 'https://calendly.com/monikanielsen/20-minute-consult-call?hide_gdpr_banner=1', text: 'Connect for Consult Call', color: '#e9cec5', textColor: '#ffffff', branding: true })   
  },[])
  return <>
     <Helmet>

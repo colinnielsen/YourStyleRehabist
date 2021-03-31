@@ -1,1 +1,1 @@
-/* /sanitycheck
+/ /sanitycheck
